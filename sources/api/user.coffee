@@ -5,6 +5,23 @@ createUser = (req, res) =>
   body = await json req
   result = await services.Person.create body
 
+fetchUser = (req, res) =>
+  result = await services.Person.fetch {
+    objectId: req.params.objectId
+  }
+
+updateUser = (req, res) =>
+  body = await json req
+  result = await services.Person.update body
+
+deleteUser = (req, res) =>
+  result = await services.Person.delete {
+    objectId: req.params.objectId
+  }
+
 export {
   createUser
+  fetchUser
+  updateUser
+  deleteUser
 }

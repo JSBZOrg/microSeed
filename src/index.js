@@ -3,7 +3,8 @@ import {
   router,
   get,
   post,
-  put
+  put,
+  del
 } from 'microrouter';
 
 import {
@@ -13,9 +14,12 @@ import {
 } from './api/login';
 
 import {
-  createUser
+  createUser,
+  fetchUser,
+  updateUser,
+  deleteUser
 } from './api/user';
 
 // login
 // user
-export default router(post('/signup', register), post('/login', login), put('/resetPsd', resetPsd), post('/user', createUser));
+export default router(post('/signup', register), post('/login', login), put('/resetPsd', resetPsd), post('/user', createUser), get('/user/:objectId', fetchUser), put('/user/:objectId', updateUser), del('/user/:objectId', deleteUser));
