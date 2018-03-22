@@ -16,7 +16,7 @@ business = {
     register:
       uri: ({
         baseUrl
-      }) => "#{baseUrl}/register"
+      }) => "#{baseUrl}/signup"
       method: 'POST'
 
     login: ({

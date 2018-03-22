@@ -19,9 +19,13 @@ deleteUser = (req, res) =>
     objectId: req.params.objectId
   }
 
+reloadUser = () =>
+  result = await services.Person.reload()
+
 export {
   createUser
   fetchUser
   updateUser
   deleteUser
+  reloadUser
 }

@@ -28,3 +28,6 @@ target.user = =>
     objectId: data.objectId
   }
   dd deleteData
+
+  reloadData = await services.user.reload()
+  dd reloadData

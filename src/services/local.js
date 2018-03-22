@@ -16,7 +16,7 @@ business = _extends({
   Login: {
     register: {
       uri: ({baseUrl}) => {
-        return `${baseUrl}/register`;
+        return `${baseUrl}/signup`;
       },
       method: 'POST'
     },

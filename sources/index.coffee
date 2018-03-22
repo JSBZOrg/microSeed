@@ -1,6 +1,6 @@
 import { router, get, post, put, del } from 'microrouter'
 import { login, register, resetPsd } from './api/login'
-import { createUser, fetchUser, updateUser, deleteUser } from './api/user'
+import { reloadUser, createUser, fetchUser, updateUser, deleteUser } from './api/user'
 
 export default router(
   # login
@@ -8,6 +8,7 @@ export default router(
   post '/login', login
   put '/resetPsd', resetPsd
   # user
+  get '/user', reloadUser
   post '/user', createUser
   get '/user/:objectId', fetchUser
   put '/user/:objectId', updateUser

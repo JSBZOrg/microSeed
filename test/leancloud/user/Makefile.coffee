@@ -27,3 +27,6 @@ target.user = =>
     objectId: data.objectId
   }
   dd deleteData
+
+  reloadData = await services.Person.reload()
+  dd reloadData
