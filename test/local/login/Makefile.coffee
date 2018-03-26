@@ -8,13 +8,13 @@ target.all = =>
 target.login = =>
 
   registerData = await services.Login.register {
-    username: '张三'
+    username: '何文涛'
     password: '123456'
   }
   dd registerData
 
   loginData = await services.Login.login {
-    username: '张三'
+    username: '何文涛'
     password: '123456'
   }
   dd loginData

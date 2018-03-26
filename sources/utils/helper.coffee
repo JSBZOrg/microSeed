@@ -18,6 +18,13 @@ verifyToken = (token) =>
     objectId: decoded.objectId
     sessionToken: decoded.sessionToken
 
+judgeIsVerify = (token) =>
+  decoded = jwt.verify token, 'shhh'
+  if decoded? and (Date.now() - decoded.dateTime) / 1000 / 60 < 1440
+    return true
+  else
+    return false
+
 refreshToken = (old_token) =>
   decoded = jwt.verify old_token, 'shhh'
   newToken = generateToken(
@@ -30,5 +37,6 @@ refreshToken = (old_token) =>
 export {
   verifyToken
   refreshToken
+  judgeIsVerify
   generateToken  
 }

@@ -6,19 +6,30 @@ register = (req, res) =>
   body = await json req
   isDelete = false
   username = body.username
-  personResult = await services.Person.create { username, isDelete }
-  personId = personResult.objectId
-  result = await services.Login.register {
-    body...
-    personId
-  }
+  try
+    loginData = await services.Login.login {
+      username: body.username
+      password: body.password
+    }
+  catch e
+    code = e.e.e.e.data.code
+    if code isnt 200 and code isnt 219
+      personResult = await services.Person.create { username, isDelete }
+      personId = personResult.objectId
+      result = await services.Login.register {
+        body...
+        personId
+      }
 
 login = (req, res) =>
   body = await json req
-  user = await services.Login.login {
-    username: body.username
-    password: body.password
-  }
+  try
+    user = await services.Login.login {
+      username: body.username
+      password: body.password
+    }
+  catch e
+    message: e()
 
   # 生成token
   token = generateToken(
@@ -45,6 +56,7 @@ login = (req, res) =>
 resetPsd = (req, res) =>
   body = await json req
   result = await services.Login.resetPsd body
+  
 
 export {
   login

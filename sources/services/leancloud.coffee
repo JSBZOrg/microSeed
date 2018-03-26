@@ -1,5 +1,5 @@
-import { verifyToken } from '../utils/helper'
 import getService from 'cfx.service'
+import { verifyToken } from '../utils/helper'
 import { classes, urlConf } from '../../sources/config/config.leancloud'
 
 allClasses = classes.reduce (r, c) =>

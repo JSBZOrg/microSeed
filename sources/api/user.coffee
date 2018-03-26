@@ -1,26 +1,38 @@
 import { json, send } from 'micro'
 import services from '../services/leancloud'
+import { judgeIsVerify } from '../utils/helper'
 
 createUser = (req, res) =>
   body = await json req
-  result = await services.Person.create body
+  if body?.token? and judgeIsVerify(body.token) is true
+    delete body.token
+    await services.Person.create body
+ 
 
 fetchUser = (req, res) =>
-  result = await services.Person.fetch {
-    objectId: req.params.objectId
-  }
+  body = await json req
+  if body?.token? and judgeIsVerify(body.token) is true
+    await services.Person.fetch {
+      objectId: body.objectId
+    }
 
 updateUser = (req, res) =>
   body = await json req
-  result = await services.Person.update body
+  if body?.token? and judgeIsVerify(body.token) is true
+    delete body.token
+    await services.Person.update body
 
 deleteUser = (req, res) =>
-  result = await services.Person.delete {
-    objectId: req.params.objectId
-  }
+  body = await json req
+  if body?.token? and judgeIsVerify(body.token) is true
+    await services.Person.delete {
+      objectId: body.objectId
+    }
 
-reloadUser = () =>
-  result = await services.Person.reload()
+reloadUser = (req, res) =>
+  body = await json req
+  if body?.token? and judgeIsVerify(body.token) is true
+    await services.Person.reload()
 
 export {
   createUser
