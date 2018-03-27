@@ -34,7 +34,6 @@ login = (req, res) =>
       username: body.username
       password: body.password
     }
-  catch e
     if user?.objectId? and user?.sessionToken?
       # 生成token
       token = generateToken(
@@ -50,13 +49,14 @@ login = (req, res) =>
         delete user.updatedAt
       if user?.createdAt?
         delete user.createdAt
-
       # 返回的数据
       return {
         user
         token
       }
-    else
+  catch e
+    err = e()
+    if err?
       return {
         error:
           code: 111
