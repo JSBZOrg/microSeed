@@ -13,13 +13,13 @@ register = (req, res) =>
     }
     if loginData?
       return {
-        code: 110
-        message: '该账号已存在！'
+        error:
+          code: 110
+          message: '该账号已存在！'
       }
   catch e
-    code = e.e.e.e.data.code
-    # code以后需要严谨一些
-    if code isnt 200 and code isnt 219
+    err = e()
+    if err?
       personResult = await services.Person.create { username, isDelete }
       personId = personResult.objectId
       result = await services.Login.register {
@@ -58,8 +58,9 @@ login = (req, res) =>
       }
     else
       return {
-        code: 111
-        message: '账号或者密码出错！'
+        error:
+          code: 111
+          message: '账号或者密码出错！'
       }
     
 resetPsd = (req, res) =>
