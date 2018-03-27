@@ -7,7 +7,6 @@ createUser = (req, res) =>
   if body?.token? and judgeIsVerify(body.token) is true
     delete body.token
     await services.Person.create body
- 
 
 fetchUser = (req, res) =>
   body = await json req
