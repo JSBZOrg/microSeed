@@ -17,7 +17,9 @@ import {
 
 register = async(req, res) => {
   var body, code, e, isDelete, loginData, personId, personResult, result, username;
+  console.log('req---->>', req);
   body = (await json(req));
+  console.log('hjhdjf--->>', body);
   isDelete = false;
   username = body.username;
   try {

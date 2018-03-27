@@ -13,6 +13,7 @@ register = (req, res) =>
     }
   catch e
     code = e.e.e.e.data.code
+    # code以后需要严谨一些
     if code isnt 200 and code isnt 219
       personResult = await services.Person.create { username, isDelete }
       personId = personResult.objectId
