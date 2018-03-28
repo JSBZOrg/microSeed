@@ -21,3 +21,5 @@ package-lock.json
 yarn.lock
 yarn*.log
 .lock
+
+.env
