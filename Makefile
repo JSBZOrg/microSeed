@@ -1,4 +1,4 @@
-pjName := cfx.micro-seed
+pjName := microSeed
 
 docker:
 	docker run \
@@ -17,6 +17,15 @@ in:
 	docker exec \
 		-ti \
 		${pjName} \
+		/bin/bash
+
+link:
+	docker run \
+		--name ${pjName} \
+		--rm \
+		-ti \
+		-v $$(pwd):/root/${pjName} \
+		mooxe/node \
 		/bin/bash
 
 export PATH := ./node_modules/.bin:$(PATH)
