@@ -15,7 +15,7 @@ classes = [
 
 urlConf =
   withSSL: true
-  host: "#{LC_Key.id[0..7].toLowerCase()}.api.lncld.net"
+  host: "#{LC_Key.lcKey.id[0..7].toLowerCase()}.api.lncld.net"
   prefix: ({
     business
   }) =>
@@ -32,8 +32,8 @@ urlConf =
       }
     , {}
   headers:
-    "X-LC-Id": LC_Key.id
-    "X-LC-Key": LC_Key.key
+    "X-LC-Id": LC_Key.lcKey.id
+    "X-LC-Key": LC_Key.lcKey.key
 
 export {
   classes

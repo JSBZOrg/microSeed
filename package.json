@@ -9,6 +9,7 @@
     "rebuild": "make rebuild; npm run-script rollup",
     "dev": "npm run-script build; micro-dev",
     "start": "npm run-script rebuild; micro",
+    "copyEnv": "cp .example.env .env",
     "postinstall": "npm run rebuild"
   },
   "dependencies": {
