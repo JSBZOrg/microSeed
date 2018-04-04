@@ -1,4 +1,5 @@
 import getService from 'cfx.service'
+import urlencode from 'urlencode'
 import { verifyToken } from '../utils/helper'
 import { classes, urlConf } from '../../sources/config/config.leancloud'
 
@@ -57,6 +58,23 @@ business = {
           headers: newHeaders
           data
         }
+
+  Special:
+
+    findLandlordWithIDCard: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        qsEncode = urlencode JSON.stringify IDCard: "#{data.IDCard}"
+        request "#{baseUrl}/classes/Landlords?where=#{qsEncode}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
+
   allClasses...
 }
 

@@ -21,6 +21,17 @@ import {
   deleteUser
 } from './api/user';
 
+import {
+  createLandlord,
+  findLdwithIDCard
+} from './api/landlord';
+
+import {
+  createHouse
+} from './api/house';
+
 // login
 // user
-export default router(post('/signup', register), post('/login', login), put('/resetPsd', resetPsd), get('/user', reloadUser), post('/user', createUser), get('/user/:objectId', fetchUser), put('/user/:objectId', updateUser), del('/user/:objectId', deleteUser));
+// landlord
+// house
+export default router(post('/signup', register), post('/login', login), put('/resetPsd', resetPsd), get('/user', reloadUser), post('/user', createUser), get('/user/:objectId', fetchUser), put('/user/:objectId', updateUser), del('/user/:objectId', deleteUser), get('/landlord/link/:IDCard', findLdwithIDCard), post('/landlord', createLandlord), post('/house', createHouse));

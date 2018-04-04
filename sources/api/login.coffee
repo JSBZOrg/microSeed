@@ -4,7 +4,6 @@ import { verifyToken, refreshToken, generateToken } from '../../sources/utils/he
 
 register = (req, res) =>
   body = await json req
-  console.log 'body--->>', body
   isDelete = false
   username = body.username
   try
@@ -68,7 +67,6 @@ resetPsd = (req, res) =>
   body = await json req
   result = await services.Login.resetPsd body
   
-
 export {
   login
   register

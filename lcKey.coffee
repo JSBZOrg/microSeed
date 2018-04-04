@@ -1,5 +1,5 @@
 require('dotenv').config()
-if process?.env?
+if process?.env?.ID? and process?.env?.KEY?
   lcKey = 
     id: process.env.ID
     key: process.env.KEY

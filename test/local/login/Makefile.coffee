@@ -7,11 +7,11 @@ target.all = =>
 
 target.login = =>
 
-  registerData = await services.Login.register {
-    username: '何文涛'
-    password: '123456'
-  }
-  dd registerData
+  # registerData = await services.Login.register {
+  #   username: '何文涛'
+  #   password: '123456'
+  # }
+  # dd registerData
 
   loginData = await services.Login.login {
     username: '何文涛'
@@ -19,10 +19,10 @@ target.login = =>
   }
   dd loginData
 
-  resetPwdData = await services.Login.resetPsd {
-    token: loginData.token
-    old_password: '123456'
-    new_password: '123456'
-  }
-  dd resetPwdData
+  # resetPwdData = await services.Login.resetPsd {
+  #   token: loginData.token
+  #   old_password: '123456'
+  #   new_password: '123456'
+  # }
+  # dd resetPwdData
 

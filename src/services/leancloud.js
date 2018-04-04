@@ -5,6 +5,8 @@ var allClasses, business, services,
 
 import getService from 'cfx.service';
 
+import urlencode from 'urlencode';
+
 import {
   verifyToken
 } from '../utils/helper';
@@ -50,6 +52,21 @@ business = _extends({
         return request(url, {
           method: 'put',
           headers: newHeaders,
+          data
+        });
+      };
+    }
+  },
+  Special: {
+    findLandlordWithIDCard: ({request, baseUrl, headers}) => {
+      return (data) => {
+        var qsEncode;
+        qsEncode = urlencode(JSON.stringify({
+          IDCard: `${data.IDCard}`
+        }));
+        return request(`${baseUrl}/classes/Landlords?where=${qsEncode}`, {
+          method: 'GET',
+          headers,
           data
         });
       };

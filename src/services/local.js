@@ -7,7 +7,7 @@ import getService from 'cfx.service';
 
 import urlConf from '../../localConf';
 
-classes = ['user'].reduce((r, c) => {
+classes = ['user', 'landlord', 'house'].reduce((r, c) => {
   var ref;
   return _extends({}, r, {[ref = `${c}`]: ref});
 }, {});
@@ -35,6 +35,17 @@ business = _extends({
       return (data) => {
         return request(`${baseUrl}/resetPsd`, {
           method: 'put',
+          data
+        });
+      };
+    }
+  },
+  Special: {
+    findLandlordWithIDCard: ({request, baseUrl, headers}) => {
+      return (data) => {
+        return request(`${baseUrl}/landlord/link/${data.IDCard}`, {
+          method: 'GET',
+          headers,
           data
         });
       };

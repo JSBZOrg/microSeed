@@ -13,6 +13,7 @@
     "postinstall": "npm run rebuild"
   },
   "dependencies": {
+    "awaity": "^0.0.31",
     "axios": "^0.18.0",
     "cfx.rollup-plugin-coffee2": "^0.1.4",
     "cfx.service": "^0.0.15",

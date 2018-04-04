@@ -3,6 +3,8 @@ import urlConf from '../../localConf'
 
 classes = [
   'user'
+  'landlord'
+  'house'
 ].reduce (r, c) =>
   {
     r...
@@ -48,6 +50,22 @@ business = {
           method: 'put'
           data
         }
+
+  Special:
+
+    findLandlordWithIDCard: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        request "#{baseUrl}/landlord/link/#{data.IDCard}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
+
   classes...
 }
 
