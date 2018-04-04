@@ -1,6 +1,5 @@
 import 'shelljs/make'
 import dd from 'ddeyes'
-import urlencode from 'urlencode'
 import houses from './houses'
 import landlord from './landlord'
 import services from '../../sources/services/local'
@@ -24,14 +23,33 @@ target.houses = =>
   , (house) =>
     try
       # 通过IDCard查找是否存在该房东
-      data = await services.Special.findLandlordWithIDCard {
+      landlord_data = await services.Special.findLandlordWithIDCard {
         token: user.token
         IDCard: house.landlord.IDCard
       }
+      # # 通过IDCard查找是否存在该授权人
+      # authorizer_data = await services.Special.findLandlordWithIDCard {
+      #   token: user.token
+      #   IDCard: house.authorizer.IDCard
+      # }
+      # # 通过IDCard查找是否存在该结款人
+      # payee_data = await services.Special.findLandlordWithIDCard {
+      #   token: user.token
+      #   IDCard: house.payee.IDCard
+      # }
+      # # Promise.all方法
+      # Promise.all([landlord_data, authorizer_data, payee_data])
+      #   .then (results) =>
+      #     console.log results
+      #     # results.forEach (result) =>
+      #     #   console.log result
+      #   .catch (error) =>
+      #     dd error
+
       # 如果存在则将landlord属性换为landlordId属性
-      if data?.results? and data.results.length >= 1
+      if landlord_data?.results? and landlord_data.results.length >= 1
         delete house.landlord
-        house.landlordId = data.results[0].objectId
+        house.landlordId = landlord_data.results[0].objectId
         params = house
         await services.house.create {
           token: user.token
@@ -53,4 +71,4 @@ target.houses = =>
             params...
           }
     catch error
-      dd error
+      dd error()

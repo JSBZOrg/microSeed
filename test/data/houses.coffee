@@ -17,7 +17,9 @@ export default [
     agencyFees: '1800'
     rentMoney: '3600'
     earnestMoney: '3600'
-    landlord: landlord[0]
+    landlord: landlord[0]      # 房东
+    authorizer: landlord[1]    # 授权人
+    payee: landlord[0]         # 结款人
   ,
     province: '湖北省'
     city: '武汉市'
@@ -35,5 +37,7 @@ export default [
     agencyFees: '1800'
     rentMoney: '3600'
     earnestMoney: '3600'
-    landlord: landlord[1]
+    landlord: landlord[1]      # 房东
+    authorizer: landlord[1]    # 授权人
+    payee: landlord[1]         # 结款人
 ]

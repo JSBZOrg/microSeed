@@ -9,4 +9,3 @@ else
     key: 'rkhxIbanALHnF6jhCsIHj8u6'
 
 export default lcKey
-  
