@@ -1,4 +1,4 @@
-import { json, send } from 'micro'
+import { json } from 'micro'
 import services from '../services/leancloud'
 import { judgeIsVerify } from '../utils/helper'
 

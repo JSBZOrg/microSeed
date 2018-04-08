@@ -18,7 +18,8 @@ import {
   createUser,
   fetchUser,
   updateUser,
-  deleteUser
+  deleteUser,
+  findUserWithIDCard
 } from './api/user';
 
 import {
@@ -34,4 +35,4 @@ import {
 // user
 // landlord
 // house
-export default router(post('/signup', register), post('/login', login), put('/resetPsd', resetPsd), get('/user', reloadUser), post('/user', createUser), get('/user/:objectId', fetchUser), put('/user/:objectId', updateUser), del('/user/:objectId', deleteUser), get('/landlord/link/:IDCard', findLdwithIDCard), post('/landlord', createLandlord), post('/house', createHouse));
+export default router(post('/signup', register), post('/login', login), put('/resetPsd', resetPsd), get('/user', reloadUser), post('/user', createUser), get('/user/:objectId', fetchUser), put('/user/:objectId', updateUser), del('/user/:objectId', deleteUser), get('/user/link/:IDCard', findUserWithIDCard), get('/landlord/link/:IDCard', findLdwithIDCard), post('/landlord', createLandlord), post('/house', createHouse));

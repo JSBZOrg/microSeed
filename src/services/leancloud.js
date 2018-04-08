@@ -70,6 +70,19 @@ business = _extends({
           data
         });
       };
+    },
+    findUserWithIDCard: ({request, baseUrl, headers}) => {
+      return (data) => {
+        var qsEncode;
+        qsEncode = urlencode(JSON.stringify({
+          IDCard: `${data.IDCard}`
+        }));
+        return request(`${baseUrl}/classes/Person?where=${qsEncode}`, {
+          method: 'GET',
+          headers,
+          data
+        });
+      };
     }
   }
 }, allClasses);

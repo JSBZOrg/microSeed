@@ -19,7 +19,7 @@ export default [
     earnestMoney: '3600'
     landlord: landlord[0]      # 房东
     authorizer: landlord[1]    # 授权人
-    payee: landlord[0]         # 结款人
+    payee: landlord[2]         # 结款人
   ,
     province: '湖北省'
     city: '武汉市'
@@ -38,6 +38,6 @@ export default [
     rentMoney: '3600'
     earnestMoney: '3600'
     landlord: landlord[1]      # 房东
-    authorizer: landlord[1]    # 授权人
-    payee: landlord[1]         # 结款人
+    authorizer: landlord[2]    # 授权人  
+    payee: landlord[3]         # 结款人
 ]

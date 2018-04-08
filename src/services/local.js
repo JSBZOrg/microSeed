@@ -49,6 +49,15 @@ business = _extends({
           data
         });
       };
+    },
+    findUserWithIDCard: ({request, baseUrl, headers}) => {
+      return (data) => {
+        return request(`${baseUrl}/user/link/${data.IDCard}`, {
+          method: 'GET',
+          headers,
+          data
+        });
+      };
     }
   }
 }, classes);

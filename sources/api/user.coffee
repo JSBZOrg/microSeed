@@ -1,4 +1,4 @@
-import { json, send } from 'micro'
+import { json } from 'micro'
 import services from '../services/leancloud'
 import { judgeIsVerify } from '../utils/helper'
 
@@ -33,10 +33,16 @@ reloadUser = (req, res) =>
   if body?.token? and judgeIsVerify(body.token) is true
     await services.Person.reload()
 
+findUserWithIDCard = (req, res) =>
+  body = await json req
+  if body?.token? and judgeIsVerify(body.token) is true
+    await services.Special.findUserWithIDCard body
+
 export {
   createUser
   fetchUser
   updateUser
   deleteUser
   reloadUser
+  findUserWithIDCard
 }

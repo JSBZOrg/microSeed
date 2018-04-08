@@ -65,6 +65,19 @@ business = {
           headers
           data
         }
+    
+    findUserWithIDCard: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        request "#{baseUrl}/user/link/#{data.IDCard}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
 
   classes...
 }

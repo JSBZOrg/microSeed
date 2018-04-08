@@ -74,6 +74,20 @@ business = {
           headers
           data
         }
+    
+    findUserWithIDCard: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        qsEncode = urlencode JSON.stringify IDCard: "#{data.IDCard}"
+        request "#{baseUrl}/classes/Person?where=#{qsEncode}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
 
   allClasses...
 }
