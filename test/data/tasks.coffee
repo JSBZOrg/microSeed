@@ -46,6 +46,25 @@ target.houses = =>
   await each houses
   , (house) =>
     try
+      house.otherLandlord.forEach (iterm) =>
+        # 查找是否存在其他房东
+        otherLandlord_data = await findLandlordFunc {
+          token: user.token
+          IDCard: iterm.IDCard
+        }
+        if otherLandlord_data?.results? and otherLandlord_data.results.length >= 1
+          index = house.otherLandlord.indexOf iterm
+          house.otherLandlord[index] = otherLandlord_data.results[0].objectId
+        else
+          # 不存在走新建逻辑
+          data = await createLandlordFunc {
+            token: user.token
+            params: iterm
+          }
+          if data?.objectId?
+            index = house.otherLandlord.indexOf iterm
+            house.otherLandlord[index] = data.objectId
+            
       # 查找是否存在授权人
       authorizer_data = await findFunc {
         token: user.token
@@ -84,6 +103,8 @@ target.houses = =>
           delete house.payee
           house.payeeId = data.objectId
       
+      
+
       # 查找是否存在房东
       landlord_data = await findLandlordFunc {
         token: user.token
@@ -114,7 +135,7 @@ target.houses = =>
           }
 
     catch error
-      dd error()
+      dd error
 
   # await each houses
   # , (house) =>
