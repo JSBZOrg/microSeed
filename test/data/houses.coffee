@@ -18,6 +18,10 @@ export default [
     rentMoney: '3600'
     earnestMoney: '3600'
     landlord: landlord[0]      # 房东
+    otherLandlord: [           # 其他房东
+      landlord[1]
+      landlord[2]
+    ]
     authorizer: landlord[1]    # 授权人
     payee: landlord[2]         # 结款人
   ,
@@ -38,6 +42,10 @@ export default [
     rentMoney: '3600'
     earnestMoney: '3600'
     landlord: landlord[1]      # 房东
-    authorizer: landlord[2]    # 授权人  
-    payee: landlord[3]         # 结款人
+    otherLandlord: [           # 其他房东
+      landlord[0]
+      landlord[2]
+    ]
+    authorizer: landlord[1]    # 授权人
+    payee: landlord[1]         # 结款人
 ]
