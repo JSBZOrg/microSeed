@@ -2,7 +2,7 @@ export default [
     realName: '乐群桥'
     sex: ''
     phoneNo: '18717176007'
-    IDCard: '420106197201264429' 
+    IDCard: '420106197201264429'
     remark: '缺少性别'
   ,
     realName: '任永开'

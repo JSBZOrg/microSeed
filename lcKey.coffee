@@ -5,7 +5,7 @@ if process?.env?.ID? and process?.env?.KEY?
     key: process.env.KEY
 else
   lcKey = 
-    id: 'AtqISomogAEVLsjm6scgVE7K-gzGzoHsz'
-    key: 'rkhxIbanALHnF6jhCsIHj8u6'
+    id: 'GIVjfb4jm56HdbjJAj5B10FX-gzGzoHsz'
+    key: 'gBqONgCzJJB5KkGOcVF56Rxe'
 
 export default lcKey
