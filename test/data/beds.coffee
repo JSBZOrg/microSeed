@@ -22,7 +22,7 @@ export default [
     bedName: ''
     rentMoney: '680'
     detentionType: ''
-    remark: '' 
+    remark: ''
   ,
     bedNo: '1401-2-1'
     bedName: ''

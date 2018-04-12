@@ -18,6 +18,7 @@
     "cfx.rollup-plugin-coffee2": "^0.1.4",
     "cfx.service": "^0.0.15",
     "dotenv": "^5.0.1",
+    "fs": "^0.0.1-security",
     "jsonwebtoken": "^8.2.0",
     "micro": "^9.1.0",
     "micro-post": "^1.0.0",

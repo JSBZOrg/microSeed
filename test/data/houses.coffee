@@ -1,4 +1,5 @@
 import landlord from './landlord'
+import room from './rooms'
 
 export default [
     province: '湖北省'
@@ -23,6 +24,9 @@ export default [
     ]
     authorizer: landlord[0]    # 授权人
     payee: landlord[0]         # 结款人
+    room: [                    # 房源下的房间 目前是自定义的房间
+      room[0]
+    ]
   ,
     province: '湖北省'
     city: '武汉市'
@@ -44,6 +48,9 @@ export default [
     otherLandlord: []          # 其他房东
     authorizer: landlord[2]    # 授权人
     payee: landlord[2]         # 结款人
+    room: [                    # 房源下的房间目前是自定义房间
+      room[1]
+    ]
   ,
     province: '湖北省'
     city: '武汉市'
@@ -65,6 +72,9 @@ export default [
     otherLandlord: []          # 其他房东
     authorizer: landlord[3]    # 授权人
     payee: landlord[3]         # 结款人
+    room: [                    # 房源下的房间目前是自定义房间
+      room[2]
+    ]
   ,
     province: '湖北省'
     city: '武汉市'
@@ -88,6 +98,9 @@ export default [
     ]          
     authorizer: landlord[4]    # 授权人
     payee: landlord[4]         # 结款人
+    room: [                    # 房源下的房间目前是自定义房间
+      room[3]
+    ]
   ,
     province: '湖北省'
     city: '武汉市'
@@ -109,6 +122,9 @@ export default [
     otherLandlord: []          # 其他房东
     authorizer: landlord[6]    # 授权人
     payee: landlord[6]         # 结款人
+    room: [                    # 房源下的房间目前是自定义房间
+      room[4]
+    ]
   ,
     province: '湖北省'
     city: '武汉市'
@@ -130,5 +146,8 @@ export default [
     otherLandlord: []          # 其他房东
     authorizer: landlord[7]    # 授权人
     payee: landlord[7]         # 结款人
+    room: [                    # 房源下的房间目前是自定义房间
+      room[5]
+    ]
     
 ]

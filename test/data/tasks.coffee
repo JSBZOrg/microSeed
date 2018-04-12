@@ -1,5 +1,6 @@
 import 'shelljs/make'
 import dd from 'ddeyes'
+import beds from './beds'
 import houses from './houses'
 import landlord from './landlord'
 import services from '../../sources/services/local'
