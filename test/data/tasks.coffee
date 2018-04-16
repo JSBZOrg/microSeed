@@ -124,13 +124,36 @@ target.houses = =>
           params: params
         }
         if data?.objectId?
+          tempHouseData = JSON.parse JSON.stringify house
           delete house.landlord
+          delete house.beds
+          delete house.room
           house.landlordId = data.objectId
-          params = house
-          await services.house.create {
+          # 创建house
+          house_data = await services.house.create {
             token: user.token
-            params...
+            house...
           }
+          # 创建room
+          tempHouseData.room.forEach (room) =>
+            params = {
+              houseId: house_data.objectId
+              room...
+            }
+            room_data = await services.room.create {
+              token: user.token
+              params...
+            }
+            # 创建bed
+            tempHouseData.beds.forEach (bed) =>
+              params = {
+                roomId: room_data.objectId
+                bed...
+              }
+              await services.bed.create {
+                token: user.token
+                params...
+              }
 
     catch error
       dd error

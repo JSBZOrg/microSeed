@@ -5,6 +5,8 @@ classes = [
   'user'
   'landlord'
   'house'
+  'room'
+  'bed'
 ].reduce (r, c) =>
   {
     r...

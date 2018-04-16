@@ -3,6 +3,8 @@ import { login, register, resetPsd } from './api/login'
 import { reloadUser, createUser, fetchUser, updateUser, deleteUser, findUserWithIDCard } from './api/user'
 import { createLandlord, findLdwithIDCard } from './api/landlord'
 import { createHouse } from './api/house'
+import { createRoom } from './api/room'
+import { createBed } from './api/bed'
 
 export default router(
   # login
@@ -21,4 +23,8 @@ export default router(
   post '/landlord', createLandlord
   # house
   post '/house', createHouse
+  # room
+  post '/room', createRoom
+  # bed
+  post '/bed', createBed
 )

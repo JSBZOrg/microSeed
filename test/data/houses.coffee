@@ -38,9 +38,7 @@ export default [
     room: [
       room01
     ]
-    beds: [
-      beds01
-    ]
+    beds: beds01
   ,
     province: '湖北省'
     city: '武汉市'
@@ -65,9 +63,7 @@ export default [
     room: [
       room02
     ]
-    beds: [
-      beds02
-    ]
+    beds: beds02
   ,
     province: '湖北省'
     city: '武汉市'
@@ -92,9 +88,7 @@ export default [
     room: [
       room03
     ]
-    beds: [
-      beds03
-    ]
+    beds: beds03
   ,
     province: '湖北省'
     city: '武汉市'
@@ -119,9 +113,7 @@ export default [
     room: [
       room04
     ]
-    beds: [
-      beds04
-    ]
+    beds: beds04
   ,
     province: '湖北省'
     city: '武汉市'
@@ -148,9 +140,7 @@ export default [
     room: [
       room05
     ]
-    beds: [
-      beds05
-    ]
+    beds: beds05
   ,
     province: '湖北省'
     city: '武汉市'
@@ -175,7 +165,5 @@ export default [
     room: [
       room06
     ]
-    beds: [
-      beds06
-    ]
+    beds: beds06
 ]

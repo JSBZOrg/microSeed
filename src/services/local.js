@@ -7,7 +7,7 @@ import getService from 'cfx.service';
 
 import urlConf from '../../localConf';
 
-classes = ['user', 'landlord', 'house'].reduce((r, c) => {
+classes = ['user', 'landlord', 'house', 'room', 'bed'].reduce((r, c) => {
   var ref;
   return _extends({}, r, {[ref = `${c}`]: ref});
 }, {});
