@@ -1,5 +1,16 @@
 import landlord from './landlord'
-import room from './rooms'
+import room01 from '../data/house/room01/room'
+import room02 from '../data/house/room02/room'
+import room03 from '../data/house/room03/room'
+import room04 from '../data/house/room04/room'
+import room05 from '../data/house/room05/room'
+import room06 from '../data/house/room06/room'
+import beds01 from '../data/house/room01/beds'
+import beds02 from '../data/house/room02/beds'
+import beds03 from '../data/house/room03/beds'
+import beds04 from '../data/house/room04/beds'
+import beds05 from '../data/house/room05/beds'
+import beds06 from '../data/house/room06/beds'
 
 export default [
     province: '湖北省'
@@ -24,8 +35,38 @@ export default [
     ]
     authorizer: landlord[0]    # 授权人
     payee: landlord[0]         # 结款人
-    room: [                    # 房源下的房间 目前是自定义的房间
-      room[0]
+    room: [
+      room01
+    ]
+    beds: [
+      beds01
+    ]
+  ,
+    province: '湖北省'
+    city: '武汉市'
+    area: '武昌区'
+    street: ''
+    community: '安顺家园'
+    building: '菊坊2号'
+    unit: '1单元'
+    floor: '404'
+    area: '140.2'
+    rentStartTime: '2017-04-01'
+    rentEndTime: '2022-03-31'
+    agent: ''
+    agentPhoneNo: ''
+    agencyFees: ''
+    rentMoney: '5000'
+    earnestMoney: '5000'
+    landlord: landlord[7]      # 房东
+    otherLandlord: []          # 其他房东
+    authorizer: landlord[7]    # 授权人
+    payee: landlord[7]         # 结款人
+    room: [
+      room02
+    ]
+    beds: [
+      beds02
     ]
   ,
     province: '湖北省'
@@ -48,8 +89,11 @@ export default [
     otherLandlord: []          # 其他房东
     authorizer: landlord[2]    # 授权人
     payee: landlord[2]         # 结款人
-    room: [                    # 房源下的房间目前是自定义房间
-      room[1]
+    room: [
+      room03
+    ]
+    beds: [
+      beds03
     ]
   ,
     province: '湖北省'
@@ -72,8 +116,11 @@ export default [
     otherLandlord: []          # 其他房东
     authorizer: landlord[3]    # 授权人
     payee: landlord[3]         # 结款人
-    room: [                    # 房源下的房间目前是自定义房间
-      room[2]
+    room: [
+      room04
+    ]
+    beds: [
+      beds04
     ]
   ,
     province: '湖北省'
@@ -98,8 +145,11 @@ export default [
     ]          
     authorizer: landlord[4]    # 授权人
     payee: landlord[4]         # 结款人
-    room: [                    # 房源下的房间目前是自定义房间
-      room[3]
+    room: [
+      room05
+    ]
+    beds: [
+      beds05
     ]
   ,
     province: '湖北省'
@@ -122,32 +172,10 @@ export default [
     otherLandlord: []          # 其他房东
     authorizer: landlord[6]    # 授权人
     payee: landlord[6]         # 结款人
-    room: [                    # 房源下的房间目前是自定义房间
-      room[4]
+    room: [
+      room06
     ]
-  ,
-    province: '湖北省'
-    city: '武汉市'
-    area: '武昌区'
-    street: ''
-    community: '安顺家园'
-    building: '菊坊2号'
-    unit: '1单元'
-    floor: '404'
-    area: '140.2'
-    rentStartTime: '2017-04-01'
-    rentEndTime: '2022-03-31'
-    agent: ''
-    agentPhoneNo: ''
-    agencyFees: ''
-    rentMoney: '5000'
-    earnestMoney: '5000'
-    landlord: landlord[7]      # 房东
-    otherLandlord: []          # 其他房东
-    authorizer: landlord[7]    # 授权人
-    payee: landlord[7]         # 结款人
-    room: [                    # 房源下的房间目前是自定义房间
-      room[5]
+    beds: [
+      beds06
     ]
-    
 ]
