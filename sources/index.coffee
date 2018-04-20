@@ -1,10 +1,10 @@
 import { router, get, post, put, del } from 'microrouter'
 import { login, register, resetPsd } from './api/login'
 import { reloadUser, createUser, fetchUser, updateUser, deleteUser, findUserWithIDCard } from './api/user'
-import { createLandlord, findLdwithIDCard } from './api/landlord'
-import { createHouse } from './api/house'
-import { createRoom } from './api/room'
-import { createBed } from './api/bed'
+import { createLandlord, findLdwithIDCard, reloadLandlord } from './api/landlord'
+import { createHouse, findHouseWithLandlord } from './api/house'
+import { createRoom, findRoomWithHouse } from './api/room'
+import { createBed, reloadBed } from './api/bed'
 
 export default router(
   # login
@@ -20,11 +20,15 @@ export default router(
   get '/user/link/:IDCard', findUserWithIDCard
   # landlord
   get '/landlord/link/:IDCard', findLdwithIDCard
+  get '/landlord', reloadLandlord
   post '/landlord', createLandlord
   # house
   post '/house', createHouse
+  get '/house/link/:landlordId', findHouseWithLandlord
   # room
   post '/room', createRoom
+  get '/room/link/:houseId', findRoomWithHouse
   # bed
   post '/bed', createBed
+  get '/bed', reloadBed
 )

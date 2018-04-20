@@ -8,6 +8,13 @@ createBed = (req, res) =>
     delete body.token
     await services.Beds.create body
 
+reloadBed = (req, res) =>
+  body = await json req
+  if body?.token? and judgeIsVerify(body.token) is true
+    delete body.token
+    await services.Beds.reload body
+
 export {
   createBed
+  reloadBed
 }

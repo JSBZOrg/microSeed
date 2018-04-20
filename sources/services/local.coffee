@@ -80,6 +80,32 @@ business = {
           headers
           data
         }
+    
+    findHouseWithLandlord: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        request "#{baseUrl}/house/link/#{data.landlordId}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
+
+    findRoomWithHouse: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        request "#{baseUrl}/room/link/#{data.houseId}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
 
   classes...
 }

@@ -12,6 +12,7 @@ target.all = =>
 target.landlord = =>
   dd landlord
 
+# 一键导入数据 注: leancloud有数据导入导出的功能
 target.houses = =>
 
   user = await services.Login.login {
@@ -46,8 +47,8 @@ target.houses = =>
   await each houses
   , (house) =>
     try
+      # 查找是否存在其他房东    
       house.otherLandlord.forEach (iterm) =>
-        # 查找是否存在其他房东
         otherLandlord_data = await findLandlordFunc {
           token: user.token
           IDCard: iterm.IDCard
@@ -102,6 +103,53 @@ target.houses = =>
         if data?.objectId?
           delete house.payee
           house.payeeId = data.objectId
+
+      # # 查找是否有房东
+      # landlord_data = await findLandlordFunc {
+      #   token: user.token
+      #   IDCard: house.landlord.IDCard
+      # }
+      # if landlord_data?.results? and landlord_data.results.length >= 1
+      #   house.landlordId = landlord_data.results[0].objectId
+      # else
+      #   # 不存在房东的情况下
+      #   data = await createLandlordFunc {
+      #     token: user.token
+      #     params: house.landlord
+      #   }
+      #   if data?.objectId?
+      #     house.landlordId = data.objectId
+      
+      # # 新建房源、房间、床位等
+      # tempHouseData = JSON.parse JSON.stringify house      
+      # delete house.landlord
+      # delete house.beds
+      # delete house.room
+      # # 创建房源
+      # house_data = await services.house.create {
+      #   token: user.token
+      #   house...
+      # }
+      # # 创建room
+      # tempHouseData.room.forEach (room) =>
+      #   params = {
+      #     houseId: house_data.objectId
+      #     room...
+      #   }
+      #   room_data = await services.room.create {
+      #     token: user.token
+      #     params...
+      #   }
+      #   # 创建bed
+      #   tempHouseData.beds.forEach (bed) =>
+      #     params = {
+      #       roomId: room_data.objectId
+      #       bed...
+      #     }
+      #     await services.bed.create {
+      #       token: user.token
+      #       params...
+      #     }
       
       # 查找是否存在房东
       landlord_data = await findLandlordFunc {
@@ -157,3 +205,40 @@ target.houses = =>
 
     catch error
       dd error
+
+# 数据导出
+target.out = =>
+  # 登录
+  user = await services.Login.login {
+    username: '何文涛'
+    password: '123456'
+  }
+  
+  # 找到所有房东
+  landlordResults = await services.landlord.reload {
+    token: user.token
+  }
+  # 找到房东下的房源
+  landlordResults.results.forEach (iterm) =>
+    houseResults = await services.Special.findHouseWithLandlord {
+      token: user.token
+      landlordId: iterm.objectId
+    }
+    # 找到房源下的房间
+    houseResults.results.forEach (iterm) =>
+      roomResults = await services.Special.findRoomWithHouse {
+        token: user.token
+        houseId: iterm.objectId
+      }
+      dd roomResults.results[0]
+    
+  # # 找到所有床位
+  # bedResults = await services.bed.reload {
+  #   token: user.token
+  # }
+  # bedResults.results.forEach (iterm) =>
+
+
+  
+
+  

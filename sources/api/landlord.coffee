@@ -23,7 +23,14 @@ findLdwithIDCard = (req, res) =>
     delete body.token
     await services.Special.findLandlordWithIDCard body
 
+reloadLandlord = (req, res) =>
+  body = await json req
+  if body?.token? and judgeIsVerify(body.token) is true
+    delete body.token
+    await services.Landlords.reload body
+
 export {
   createLandlord
   findLdwithIDCard
+  reloadLandlord
 }

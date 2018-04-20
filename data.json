@@ -1,0 +1,33 @@
+{
+  "classes": ["Houses", "Rooms"],
+  "Houses": [
+    {
+      "province": "湖北省",
+      "city": "武汉市",
+      "area": "武昌区",
+      "street": "",
+      "community": "安顺家园",
+      "building": "梅岭4栋",
+      "unit": "2单元",
+      "floor": "1401",
+      "acreage": 127.02,
+      "rentStartTime": "2016-11-01",
+      "rentEndTime": "2021-10-31",
+      "agent": "武汉聚联宝房地产代理有限公司",
+      "agentPhoneNo": "",
+      "agencyFees": 1800,
+      "rentMoney": 3600,
+      "earnestMoney": 3600,
+      "landlord": "",
+      "otherLandlord": "",
+      "authorizer": "",
+      "payee": "",
+      "room": "",
+      "beds": ""
+    }
+  ],
+  "Rooms": [
+
+  ]
+}
+

@@ -58,6 +58,24 @@ business = _extends({
           data
         });
       };
+    },
+    findHouseWithLandlord: ({request, baseUrl, headers}) => {
+      return (data) => {
+        return request(`${baseUrl}/house/link/${data.landlordId}`, {
+          method: 'GET',
+          headers,
+          data
+        });
+      };
+    },
+    findRoomWithHouse: ({request, baseUrl, headers}) => {
+      return (data) => {
+        return request(`${baseUrl}/room/link/${data.houseId}`, {
+          method: 'GET',
+          headers,
+          data
+        });
+      };
     }
   }
 }, classes);

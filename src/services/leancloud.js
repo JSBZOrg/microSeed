@@ -83,6 +83,32 @@ business = _extends({
           data
         });
       };
+    },
+    findHouseWithLandlord: ({request, baseUrl, headers}) => {
+      return (data) => {
+        var qsEncode;
+        qsEncode = urlencode(JSON.stringify({
+          landlordId: `${data.landlordId}`
+        }));
+        return request(`${baseUrl}/classes/Houses?where=${qsEncode}`, {
+          method: 'GET',
+          headers,
+          data
+        });
+      };
+    },
+    findRoomWithHouse: ({request, baseUrl, headers}) => {
+      return (data) => {
+        var qsEncode;
+        qsEncode = urlencode(JSON.stringify({
+          houseId: `${data.houseId}`
+        }));
+        return request(`${baseUrl}/classes/Rooms?where=${qsEncode}`, {
+          method: 'GET',
+          headers,
+          data
+        });
+      };
     }
   }
 }, allClasses);

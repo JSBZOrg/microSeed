@@ -89,6 +89,34 @@ business = {
           data
         }
 
+    findHouseWithLandlord: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        qsEncode = urlencode JSON.stringify landlordId: "#{data.landlordId}"
+        request "#{baseUrl}/classes/Houses?where=#{qsEncode}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
+
+    findRoomWithHouse: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        qsEncode = urlencode JSON.stringify houseId: "#{data.houseId}"
+        request "#{baseUrl}/classes/Rooms?where=#{qsEncode}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
+
   allClasses...
 }
 
