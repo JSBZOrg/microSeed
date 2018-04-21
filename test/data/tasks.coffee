@@ -275,74 +275,17 @@ target.out = =>
 
         allTemp.push(house_temp)
         
-        fs.mkdir("../data/json", 0o0777, (err) =>
-          if err
-            dd err
+        fs.exists("../data/json", (exists) =>
+          if not exists
+            fs.mkdir("../data/json", 0o0777, (err) =>
+              if err
+                dd err
+            )
+          else
+            allTemp.forEach (eachTemp, index) =>
+              fs.writeFile("json/house#{index+1}.json", JSON.stringify(eachTemp, null, 4), (err) =>
+                if err
+                  dd err
+              )
         )  
-        allTemp.forEach (eachTemp, index) =>
-          dd eachTemp
-          fs.writeFileSync("json/house#{index+1}.json", JSON.stringify(eachTemp, null, 4), (err) =>
-            if err
-              dd err
-          )
-
-
-
-        # length = roomTotal.results.length
-        # for index in [1...length+1]
-        #   outputFileName = "./../data/json/house#{index}.json"
-        #   delay(2000)
-        #   allTemp.forEach (eachTemp) =>
-        #     # delay(1000)
-        #     dd eachTemp
-        #     fs.writeFileSync(outputFileName, JSON.stringify(eachTemp, null, 4), (err) =>
-        #       if err
-        #         dd err
-        #     )
-
-target.test = =>
-  allTemp = [
-    {
-      landlord: {
-        remark: '缺少性别',
-        sex: '',
-        phoneNo: '18717176007',
-        IDCard: '420106197201264429',
-        realName: '乐群桥'
-      }
-    },
-    {
-      landlord: {
-        remark: '',
-        sex: '',
-        phoneNo: '',
-        IDCard: '',
-        realName: ''
-      }
-    },
-    {
-      landlord: {
-        remark: '',
-        sex: '',
-        phoneNo: '',
-        IDCard: '',
-        realName: '乐群桥'
-      }
-    }
-    
-  ]
-  outputFileName = fs.mkdir("../data/json", 0o0777, (err) =>
-    if err
-      dd err
-  )  
-  allTemp.forEach (eachTemp, index) =>
-    fs.writeFile("json/#{index+1}.json", JSON.stringify(eachTemp, null, 4), (err) =>
-      if err
-        dd err
-    )
-  
-    
-
-  
-
-  
+         
