@@ -76,6 +76,15 @@ business = _extends({
           data
         });
       };
+    },
+    findBedWithRoom: ({request, baseUrl, headers}) => {
+      return (data) => {
+        return request(`${baseUrl}/bed/link/${data.roomId}`, {
+          method: 'GET',
+          headers,
+          data
+        });
+      };
     }
   }
 }, classes);

@@ -117,6 +117,20 @@ business = {
           data
         }
 
+    findBedWithRoom: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        qsEncode = urlencode JSON.stringify roomId: "#{data.roomId}"
+        request "#{baseUrl}/classes/Beds?where=#{qsEncode}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
+
   allClasses...
 }
 

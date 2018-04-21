@@ -1,5 +1,6 @@
 import 'shelljs/make'
 import dd from 'ddeyes'
+import fs from 'fs'
 import houses from './houses'
 import landlord from './landlord'
 import services from '../../sources/services/local'
@@ -104,53 +105,6 @@ target.houses = =>
           delete house.payee
           house.payeeId = data.objectId
 
-      # # 查找是否有房东
-      # landlord_data = await findLandlordFunc {
-      #   token: user.token
-      #   IDCard: house.landlord.IDCard
-      # }
-      # if landlord_data?.results? and landlord_data.results.length >= 1
-      #   house.landlordId = landlord_data.results[0].objectId
-      # else
-      #   # 不存在房东的情况下
-      #   data = await createLandlordFunc {
-      #     token: user.token
-      #     params: house.landlord
-      #   }
-      #   if data?.objectId?
-      #     house.landlordId = data.objectId
-      
-      # # 新建房源、房间、床位等
-      # tempHouseData = JSON.parse JSON.stringify house      
-      # delete house.landlord
-      # delete house.beds
-      # delete house.room
-      # # 创建房源
-      # house_data = await services.house.create {
-      #   token: user.token
-      #   house...
-      # }
-      # # 创建room
-      # tempHouseData.room.forEach (room) =>
-      #   params = {
-      #     houseId: house_data.objectId
-      #     room...
-      #   }
-      #   room_data = await services.room.create {
-      #     token: user.token
-      #     params...
-      #   }
-      #   # 创建bed
-      #   tempHouseData.beds.forEach (bed) =>
-      #     params = {
-      #       roomId: room_data.objectId
-      #       bed...
-      #     }
-      #     await services.bed.create {
-      #       token: user.token
-      #       params...
-      #     }
-      
       # 查找是否存在房东
       landlord_data = await findLandlordFunc {
         token: user.token
@@ -208,6 +162,33 @@ target.houses = =>
 
 # 数据导出
 target.out = =>
+  # 封装delete方法
+  deleteFunc = (jsonData) =>
+    if jsonData?.landlordId?
+      delete jsonData.landlordId
+    if jsonData?.updatedAt?
+      delete jsonData.updatedAt
+    if jsonData?.objectId?
+      delete jsonData.objectId
+    if jsonData?.createdAt?
+      delete jsonData.createdAt
+    if jsonData?.personId?
+      delete jsonData.personId
+    if jsonData?.payeeId?
+      delete jsonData.payeeId
+    if jsonData?.authorizerId?
+      delete jsonData.authorizerId
+    if jsonData?.houseId?
+      delete jsonData.houseId
+    if jsonData?.roomId?
+      delete jsonData.roomId
+    return jsonData
+
+  # 延时函数
+  delay = (ms) =>
+    new Promise (resolve, ms) =>
+      setTimeout resolve, ms
+
   # 登录
   user = await services.Login.login {
     username: '何文涛'
@@ -218,26 +199,149 @@ target.out = =>
   landlordResults = await services.landlord.reload {
     token: user.token
   }
+  
+  # 计算总共有多少房源
+  roomTotal = await services.room.reload {
+    token: user.token
+  }
+
+  allTemp = []
+  
   # 找到房东下的房源
   landlordResults.results.forEach (iterm) =>
     houseResults = await services.Special.findHouseWithLandlord {
       token: user.token
       landlordId: iterm.objectId
     }
-    # 找到房源下的房间
-    houseResults.results.forEach (iterm) =>
+    # 要将房源相应的授权人、其他房东、结款人的信息关联查询出来
+    # otherLandlord  payeeId  authorizerId
+    houseResults.results.forEach (house) =>
+      house_temp = JSON.parse JSON.stringify house
+      
+      # 找到其他房东的关联信息
+      house.otherLandlord.forEach (otherLd) =>
+        otherLdResults = await services.landlord.fetch {
+          token: user.token
+          objectId: otherLd
+        } 
+        otherLd_temp = JSON.parse JSON.stringify otherLdResults
+        deleteFunc(otherLd_temp)
+        house_temp.otherLandlord = otherLd_temp
+        
+      # 找到授权人的关联信息
+      authorizerResults = await services.user.fetch {
+        token: user.token
+        objectId: house.authorizerId
+      }
+      authorizer_temp = JSON.parse JSON.stringify authorizerResults
+      deleteFunc(authorizer_temp)
+      house_temp.authorizer = authorizer_temp      
+
+      # 找到结款人的关联信息
+      paeeResults = await services.user.fetch {
+        token: user.token
+        objectId: house.payeeId
+      }
+      paee_temp = JSON.parse JSON.stringify paeeResults
+      deleteFunc(paee_temp)      
+      house_temp.payee = paee_temp
+      
+      # 找到房源下的房间
       roomResults = await services.Special.findRoomWithHouse {
         token: user.token
-        houseId: iterm.objectId
+        houseId: house.objectId
       }
-      dd roomResults.results[0]
-    
-  # # 找到所有床位
-  # bedResults = await services.bed.reload {
-  #   token: user.token
-  # }
-  # bedResults.results.forEach (iterm) =>
+      room_temp = JSON.parse JSON.stringify roomResults.results
+      room_temp.forEach (roomIterm) =>
+        deleteFunc(roomIterm)      
+      house_temp.room = room_temp
 
+      # 找到房间下的床位
+      roomResults.results.forEach (room) =>
+        bedResults = await services.Special.findBedWithRoom {
+          token: user.token
+          roomId: room.objectId
+        }
+        bed_temp = JSON.parse JSON.stringify bedResults.results
+        bed_temp.forEach (bedIterm) =>
+          deleteFunc(bedIterm)
+
+        house_temp.room.forEach (roomData) =>
+          roomData.beds = bed_temp
+
+          deleteFunc(house_temp)
+          deleteFunc(iterm)        
+          house_temp.landlord = iterm
+
+        allTemp.push(house_temp)
+        
+        fs.mkdir("../data/json", 0o0777, (err) =>
+          if err
+            dd err
+        )  
+        allTemp.forEach (eachTemp, index) =>
+          dd eachTemp
+          fs.writeFileSync("json/house#{index+1}.json", JSON.stringify(eachTemp, null, 4), (err) =>
+            if err
+              dd err
+          )
+
+
+
+        # length = roomTotal.results.length
+        # for index in [1...length+1]
+        #   outputFileName = "./../data/json/house#{index}.json"
+        #   delay(2000)
+        #   allTemp.forEach (eachTemp) =>
+        #     # delay(1000)
+        #     dd eachTemp
+        #     fs.writeFileSync(outputFileName, JSON.stringify(eachTemp, null, 4), (err) =>
+        #       if err
+        #         dd err
+        #     )
+
+target.test = =>
+  allTemp = [
+    {
+      landlord: {
+        remark: '缺少性别',
+        sex: '',
+        phoneNo: '18717176007',
+        IDCard: '420106197201264429',
+        realName: '乐群桥'
+      }
+    },
+    {
+      landlord: {
+        remark: '',
+        sex: '',
+        phoneNo: '',
+        IDCard: '',
+        realName: ''
+      }
+    },
+    {
+      landlord: {
+        remark: '',
+        sex: '',
+        phoneNo: '',
+        IDCard: '',
+        realName: '乐群桥'
+      }
+    }
+    
+  ]
+  outputFileName = fs.mkdir("../data/json", 0o0777, (err) =>
+    if err
+      dd err
+  )  
+  allTemp.forEach (eachTemp, index) =>
+    fs.writeFile("json/#{index+1}.json", JSON.stringify(eachTemp, null, 4), (err) =>
+      if err
+        dd err
+    )
+  
+    
 
   
 

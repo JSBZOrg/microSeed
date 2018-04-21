@@ -107,6 +107,19 @@ business = {
           data
         }
 
+    findBedWithRoom: ({
+      request
+      baseUrl
+      headers
+    }) =>
+      (data) =>
+        request "#{baseUrl}/bed/link/#{data.roomId}"
+        , {
+          method: 'GET'
+          headers
+          data
+        }
+
   classes...
 }
 

@@ -109,6 +109,19 @@ business = _extends({
           data
         });
       };
+    },
+    findBedWithRoom: ({request, baseUrl, headers}) => {
+      return (data) => {
+        var qsEncode;
+        qsEncode = urlencode(JSON.stringify({
+          roomId: `${data.roomId}`
+        }));
+        return request(`${baseUrl}/classes/Beds?where=${qsEncode}`, {
+          method: 'GET',
+          headers,
+          data
+        });
+      };
     }
   }
 }, allClasses);

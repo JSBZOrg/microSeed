@@ -14,7 +14,14 @@ reloadBed = (req, res) =>
     delete body.token
     await services.Beds.reload body
 
+findBedWithRoom = (req, res) =>
+  body = await json req
+  if body?.token? and judgeIsVerify(body.token) is true
+    delete body.token
+    await services.Special.findBedWithRoom body
+
 export {
   createBed
   reloadBed
+  findBedWithRoom
 }
