@@ -275,6 +275,7 @@ target.out = =>
 
         allTemp.push(house_temp)
         
+        # 判断 data文件夹下面是否存在json文件如果没有则创建
         fs.exists("../data/json", (exists) =>
           if not exists
             fs.mkdir("../data/json", 0o0777, (err) =>
