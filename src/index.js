@@ -46,10 +46,15 @@ import {
   findBedWithRoom
 } from './api/bed';
 
+import {
+  createTenant
+} from './api/tenant';
+
 // login
 // user
 // landlord
 // house
 // room
 // bed
-export default router(post('/signup', register), post('/login', login), put('/resetPsd', resetPsd), get('/user', reloadUser), post('/user', createUser), get('/user/:objectId', fetchUser), put('/user/:objectId', updateUser), del('/user/:objectId', deleteUser), get('/user/link/:IDCard', findUserWithIDCard), get('/landlord/link/:IDCard', findLdwithIDCard), get('/landlord/:objectId', fetchLandlord), get('/landlord', reloadLandlord), post('/landlord', createLandlord), post('/house', createHouse), get('/house/link/:landlordId', findHouseWithLandlord), post('/room', createRoom), get('/room', reloadRoom), get('/room/link/:houseId', findRoomWithHouse), post('/bed', createBed), get('/bed', reloadBed), get('/bed/link/:roomId', findBedWithRoom));
+// tenant
+export default router(post('/signup', register), post('/login', login), put('/resetPsd', resetPsd), get('/user', reloadUser), post('/user', createUser), get('/user/:objectId', fetchUser), put('/user/:objectId', updateUser), del('/user/:objectId', deleteUser), get('/user/link/:IDCard', findUserWithIDCard), get('/landlord/link/:IDCard', findLdwithIDCard), get('/landlord/:objectId', fetchLandlord), get('/landlord', reloadLandlord), post('/landlord', createLandlord), post('/house', createHouse), get('/house/link/:landlordId', findHouseWithLandlord), post('/room', createRoom), get('/room', reloadRoom), get('/room/link/:houseId', findRoomWithHouse), post('/bed', createBed), get('/bed', reloadBed), get('/bed/link/:roomId', findBedWithRoom), post('/tenant', createTenant));

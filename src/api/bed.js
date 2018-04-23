@@ -12,29 +12,44 @@ import {
 } from '../utils/helper';
 
 createBed = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    delete body.token;
-    return (await services.Beds.create(body));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      delete body.token;
+      return (await services.Beds.create(body));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 reloadBed = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    delete body.token;
-    return (await services.Beds.reload(body));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      delete body.token;
+      return (await services.Beds.reload(body));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 findBedWithRoom = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    delete body.token;
-    return (await services.Special.findBedWithRoom(body));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      delete body.token;
+      return (await services.Special.findBedWithRoom(body));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 

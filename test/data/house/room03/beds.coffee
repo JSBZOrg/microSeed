@@ -4,24 +4,24 @@ export default [
     # 安顺星苑9栋1单元702
     bedNo: '702-1-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: '' 
-    tenant: null
+    tenant: {}
   ,
     bedNo: '702-1-2'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null    
+    tenant: {}    
   ,
     bedNo: '702-1-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null    
+    tenant: {}    
   ,
     bedNo: '702-1-4'
     bedName: ''
@@ -32,10 +32,10 @@ export default [
   ,
     bedNo: '702-2-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '702-2-2'
     bedName: ''
@@ -46,10 +46,10 @@ export default [
   ,
     bedNo: '702-2-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '702-2-4'
     bedName: ''
@@ -60,10 +60,10 @@ export default [
   ,
     bedNo: '702-2-5'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '702-2-6'
     bedName: ''
@@ -74,17 +74,17 @@ export default [
   ,
     bedNo: '702-2-7'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: '' 
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '702-2-8'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '702-3-1'
     bedName: ''
@@ -95,10 +95,10 @@ export default [
   ,
     bedNo: '702-3-2'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '702-3-3'
     bedName: ''
@@ -109,10 +109,10 @@ export default [
   ,
     bedNo: '702-3-4'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '702-大厅-1'
     bedName: ''
@@ -123,10 +123,10 @@ export default [
   ,
     bedNo: '702-大厅-2'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '702-大厅-3'
     bedName: ''

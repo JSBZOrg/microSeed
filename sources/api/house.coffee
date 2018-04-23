@@ -3,16 +3,22 @@ import services from '../services/leancloud'
 import { judgeIsVerify } from '../utils/helper'
 
 createHouse = (req, res) =>
-  body = await json req
-  if body?.token? and judgeIsVerify(body.token) is true
-    delete body.token
-    await services.Houses.create body
-
+  try
+    body = await json req
+    if body?.token? and judgeIsVerify(body.token) is true
+      delete body.token
+      await services.Houses.create body
+  catch error
+    console.log error()
+  
 findHouseWithLandlord = (req, res) =>
-  body = await json req
-  if body?.token? and judgeIsVerify(body.token) is true
-    delete body.token
-    await services.Special.findHouseWithLandlord body
+  try
+    body = await json req
+    if body?.token? and judgeIsVerify(body.token) is true
+      delete body.token
+      await services.Special.findHouseWithLandlord body
+  catch error
+    console.log error()
 
 export {
   createHouse

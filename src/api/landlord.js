@@ -13,41 +13,61 @@ import {
 } from '../utils/helper';
 
 createLandlord = async(req, res) => {
-  var body, isDelete, personData, personId;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    delete body.token;
-    isDelete = false;
-    personData = (await services.Person.create(_extends({}, body, {isDelete})));
-    personId = personData.objectId;
-    return (await services.Landlords.create(_extends({}, body, {personId})));
+  var body, error, isDelete, personData, personId;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      delete body.token;
+      isDelete = false;
+      personData = (await services.Person.create(_extends({}, body, {isDelete})));
+      personId = personData.objectId;
+      return (await services.Landlords.create(_extends({}, body, {personId})));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 findLdwithIDCard = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    delete body.token;
-    return (await services.Special.findLandlordWithIDCard(body));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      delete body.token;
+      return (await services.Special.findLandlordWithIDCard(body));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 reloadLandlord = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    delete body.token;
-    return (await services.Landlords.reload(body));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      delete body.token;
+      return (await services.Landlords.reload(body));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 fetchLandlord = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    delete body.token;
-    return (await services.Landlords.fetch(body));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      delete body.token;
+      return (await services.Landlords.fetch(body));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 

@@ -7,6 +7,7 @@ classes = [
   'house'
   'room'
   'bed'
+  'tenant'
 ].reduce (r, c) =>
   {
     r...

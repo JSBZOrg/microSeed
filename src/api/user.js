@@ -12,56 +12,86 @@ import {
 } from '../utils/helper';
 
 createUser = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    delete body.token;
-    return (await services.Person.create(body));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      delete body.token;
+      return (await services.Person.create(body));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 fetchUser = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    return (await services.Person.fetch({
-      objectId: body.objectId
-    }));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      return (await services.Person.fetch({
+        objectId: body.objectId
+      }));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 updateUser = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    delete body.token;
-    return (await services.Person.update(body));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      delete body.token;
+      return (await services.Person.update(body));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 deleteUser = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    return (await services.Person.delete({
-      objectId: body.objectId
-    }));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      return (await services.Person.delete({
+        objectId: body.objectId
+      }));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 reloadUser = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    return (await services.Person.reload());
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      return (await services.Person.reload());
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 
 findUserWithIDCard = async(req, res) => {
-  var body;
-  body = (await json(req));
-  if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
-    return (await services.Special.findUserWithIDCard(body));
+  var body, error;
+  try {
+    body = (await json(req));
+    if (((body != null ? body.token : void 0) != null) && judgeIsVerify(body.token) === true) {
+      return (await services.Special.findUserWithIDCard(body));
+    }
+  } catch (error1) {
+    error = error1;
+    return console.log(error());
   }
 };
 

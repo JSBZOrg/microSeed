@@ -46,10 +46,10 @@ export default [
   ,
     bedNo: '1401-2-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: '' 
-    tenant: null             
+    tenant: {}          
   ,
     bedNo: '1401-2-4'
     bedName: ''
@@ -60,7 +60,7 @@ export default [
   ,
     bedNo: '1401-3-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: '谌爱玲'
     tenant: tenants[21]                      
@@ -70,21 +70,21 @@ export default [
     rentMoney: 680
     detentionType: ''
     remark: ''  # 10
-    tenant: null   
+    tenant: {}   
   ,
     bedNo: '1401-3-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null       
+    tenant: {}      
   ,
     bedNo: '1401-3-4'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null       
+    tenant: {}       
   ,
     bedNo: '1401-4-1'
     bedName: ''
@@ -140,7 +140,7 @@ export default [
     rentMoney: 600
     detentionType: ''
     remark: '' # 20
-    tenant: null   
+    tenant: {}  
   ,
     bedNo: '1401-5-3'
     bedName: ''

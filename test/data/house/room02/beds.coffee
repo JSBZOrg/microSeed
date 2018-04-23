@@ -4,10 +4,10 @@ export default [
     # 安顺花园菊坊2号1单元404
     bedNo: '404-1-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-1-2'
     bedName: ''
@@ -32,31 +32,31 @@ export default [
   ,
     bedNo: '404-2'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-3-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: '' # 5
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-3-2'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-3-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-3-4'
     bedName: ''
@@ -67,24 +67,24 @@ export default [
   ,
     bedNo: '404-4-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''  # 10
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-4-2'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: '' 
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-4-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-4-4'
     bedName: ''
@@ -95,24 +95,24 @@ export default [
   ,
     bedNo: '404-4-5'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-4-6'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''  # 15
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-5-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: '' 
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-5-2'
     bedName: ''
@@ -123,23 +123,24 @@ export default [
   ,
     bedNo: '404-5-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
+    tenant: {}
   ,
     bedNo: '404-5-4'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-6-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''  # 20
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-6-2'
     bedName: ''
@@ -150,24 +151,24 @@ export default [
   ,
     bedNo: '404-6-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-6-4'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-6-5'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '404-6-6'
     bedName: ''

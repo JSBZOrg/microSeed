@@ -7,14 +7,14 @@ export default [
     rentMoney: 500
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-1-2'
     bedName: ''
     rentMoney: 500
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-1-3'
     bedName: ''
@@ -32,10 +32,10 @@ export default [
   ,
     bedNo: '103-2-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: '' # 5
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-2-2'
     bedName: ''
@@ -46,10 +46,10 @@ export default [
   ,
     bedNo: '103-2-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-3-1'
     bedName: ''
@@ -81,59 +81,59 @@ export default [
   ,
     bedNo: '103-3-5'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-3-6'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: '' 
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-4-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-4-2'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''  # 15
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-4-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-4-4'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null    
+    tenant: {}    
   ,
     bedNo: '103-4-5'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null    
+    tenant: {}    
   ,
     bedNo: '103-4-6'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null    
+    tenant: {}    
   ,
     bedNo: '103-5-1'
     bedName: ''
@@ -151,24 +151,24 @@ export default [
   ,
     bedNo: '103-5-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-5-4'
     bedName: ''
-    rentMoney: null
+    rentMoney: 500
     detentionType: '' 
     remark: '周旺'
     tenant: tenants[69]        
   ,
     bedNo: '103-6-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '103-6-2'
     bedName: ''

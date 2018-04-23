@@ -4,10 +4,10 @@ export default [
     # 安顺花园D栋1单元503
     bedNo: '503-1-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: '' 
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '503-1-2'
     bedName: ''
@@ -21,28 +21,28 @@ export default [
     rentMoney: 500
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '503-1-4'
     bedName: ''
     rentMoney: 500
     detentionType: ''
     remark: ''
-    tenant: null    
+    tenant: {}    
   ,
     bedNo: '503-1-5'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: '' # 5
-    tenant: null    
+    tenant: {}    
   ,
     bedNo: '503-1-6'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null    
+    tenant: {}    
   ,
     bedNo: '503-2-1'
     bedName: ''
@@ -53,14 +53,14 @@ export default [
   ,
     bedNo: '503-2-2'
     bedName: ''
-    rentMoney: null
+    rentMoney: 500
     detentionType: ''
     remark: '陈胜露'
     tenant: tenants[10]        
   ,
     bedNo: '503-2-3'
     bedName: ''
-    rentMoney: null
+    rentMoney: 500
     detentionType: ''
     remark: '任莎'
     tenant: tenants[11]            
@@ -98,14 +98,14 @@ export default [
     rentMoney: 500
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '503-3-6'
     bedName: ''
     rentMoney: 500
     detentionType: ''
     remark: ''  # 15
-    tenant: null
+    tenant: {}
   ,
     bedNo: '503-4'
     bedName: ''
@@ -144,22 +144,22 @@ export default [
   ,
     bedNo: '503-6-4'
     bedName: ''
-    rentMoney: null
+    rentMoney: 500
     detentionType: '' 
     remark: '袁茜'
     tenant: tenants[60]                        
   ,
     bedNo: '503-7-1'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''
-    tenant: null
+    tenant: {}
   ,
     bedNo: '503-7-2'
     bedName: ''
-    rentMoney: null
+    rentMoney: 0
     detentionType: ''
     remark: ''  # 23
-    tenant: null
+    tenant: {}
 ]

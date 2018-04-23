@@ -8,7 +8,7 @@ import services from '../../sources/services/local'
 import { each } from 'awaity/esm'
 
 target.all = =>
-  dd 'hello, world'
+  # dd 'hello, world'
 
 target.landlord = =>
   dd landlord
@@ -16,8 +16,13 @@ target.landlord = =>
 # 一键导入数据 注: leancloud有数据导入导出的功能
 target.houses = =>
 
+  await services.Login.register {
+    username: '张三'
+    password: '123456'
+  }
+
   user = await services.Login.login {
-    username: '何文涛'
+    username: '张三'
     password: '123456'
   }
 
@@ -148,17 +153,42 @@ target.houses = =>
             }
             # 创建bed
             tempHouseData.beds.forEach (bed) =>
-              params = {
-                roomId: room_data.objectId
-                bed...
-              }
-              await services.bed.create {
-                token: user.token
-                params...
-              }
+              bedTemp = JSON.parse JSON.stringify bed              
+              # 先创建房客
+              tenant = bed.tenant
+              if Object.keys(tenant).length isnt 0
+                tenant_data = await services.tenant.create {
+                  token: user.token
+                  tenant...
+                }
+                if tenant_data?.objectId?
+                  bedTemp.tenantId = tenant_data.objectId
+                  delete bedTemp.tenant
+                  # 创建bed
+                  params = {
+                    roomId: room_data.objectId
+                    bedTemp...
+                  }
+                  await services.bed.create {
+                    token: user.token
+                    params...
+                  }
+              else
+                bedTemp.tenantId = ''
+                delete bedTemp.tenant
+                # 创建bed
+                params = {
+                  roomId: room_data.objectId
+                  bedTemp...
+                }
+                await services.bed.create {
+                  token: user.token
+                  params...
+                }
+
 
     catch error
-      dd error
+      dd error()
 
 # 数据导出
 target.out = =>
