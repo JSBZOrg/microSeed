@@ -22,6 +22,7 @@ export default [
     unit: '2单元'
     floor: '1401'
     acreage: 127.02
+    rentType: '分租'
     rentStartTime: '2016-11-01'
     rentEndTime: '2021-10-31'
     agent: '武汉聚联宝房地产代理有限公司'
@@ -49,6 +50,7 @@ export default [
     unit: '1单元'
     floor: '404'
     acreage: 140.2
+    rentType: '分租'    
     rentStartTime: '2017-04-01'
     rentEndTime: '2022-03-31'
     agent: ''
@@ -74,6 +76,7 @@ export default [
     unit: '1单元'
     floor: '702'
     acreage: 138.71
+    rentType: '分租'    
     rentStartTime: '2016-11-10'
     rentEndTime: '2021-11-09'
     agent: '武汉吉家房地产经纪服务有限公司'
@@ -99,6 +102,7 @@ export default [
     unit: '1单元'
     floor: '1202'
     acreage: 138.28
+    rentType: '分租'    
     rentStartTime: '2017-01-15'
     rentEndTime: '2022-01-14'
     agent: '武汉丰联地产经纪有限公司'
@@ -124,6 +128,7 @@ export default [
     unit: '1单元'
     floor: '503'
     acreage: 140
+    rentType: '分租'    
     rentStartTime: '2017-03-01'
     rentEndTime: '2022-02-28'
     agent: '武汉熹宸房地产经纪有限公司'
@@ -151,6 +156,7 @@ export default [
     unit: '1单元'
     floor: '103'
     acreage: 148.53
+    rentType: '分租'    
     rentStartTime: '2017-03-15'
     rentEndTime: '2022-03-15'
     agent: '武汉丰联地产经纪有限公司'

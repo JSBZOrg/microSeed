@@ -32,7 +32,7 @@ export default [
     phoneNo: ''
     IDCard: ''
     belongToCompany: '棠越餐饮'
-    remark: ''
+    remark: ''  # 4
   ,
     realName: '向玉琳'
     sex: ''
@@ -67,7 +67,7 @@ export default [
     phoneNo: ''
     IDCard: ''
     belongToCompany: '中移动'
-    remark: ''
+    remark: ''  # 9
   ,
     realName: '陈胜露'
     sex: ''
@@ -100,7 +100,7 @@ export default [
     realName: '姜俊'
     sex: ''
     phoneNo: ''
-    IDCard: ''
+    IDCard: '' # 14
     belongToCompany: '中移动'
     remark: ''
   ,
@@ -135,7 +135,7 @@ export default [
     realName: '祁红琴'
     sex: ''
     phoneNo: ''
-    IDCard: ''
+    IDCard: '' # 19
     belongToCompany: ''
     remark: ''
   ,
@@ -170,7 +170,7 @@ export default [
     realName: '卢丹'
     sex: ''
     phoneNo: ''
-    IDCard: ''
+    IDCard: ''  # 24
     belongToCompany: ''
     remark: ''
   ,
@@ -204,7 +204,7 @@ export default [
   ,
     realName: '朱桂云'
     sex: ''
-    phoneNo: ''
+    phoneNo: ''  # 29
     IDCard: ''
     belongToCompany: ''
     remark: ''
@@ -239,7 +239,7 @@ export default [
   ,
     realName: '姚艳红'
     sex: ''
-    phoneNo: ''
+    phoneNo: ''  # 34
     IDCard: ''
     belongToCompany: ''
     remark: ''
@@ -274,7 +274,7 @@ export default [
   ,
     realName: '张康祥'
     sex: ''
-    phoneNo: ''
+    phoneNo: ''   # 39
     IDCard: ''
     belongToCompany: ''
     remark: ''
@@ -310,7 +310,7 @@ export default [
     realName: '康小雄'
     sex: ''
     phoneNo: ''
-    IDCard: ''
+    IDCard: ''  # 44
     belongToCompany: ''
     remark: ''
   ,
@@ -345,7 +345,7 @@ export default [
     realName: '郑东'
     sex: ''
     phoneNo: ''
-    IDCard: ''
+    IDCard: '' # 49
     belongToCompany: ''
     remark: ''
   ,
@@ -379,7 +379,7 @@ export default [
   ,
     realName: '李桃花'
     sex: ''
-    phoneNo: ''
+    phoneNo: ''  # 54
     IDCard: ''
     belongToCompany: ''
     remark: ''
@@ -414,7 +414,7 @@ export default [
   ,
     realName: '胡银'
     sex: ''
-    phoneNo: ''
+    phoneNo: ''  # 59
     IDCard: ''
     belongToCompany: ''
     remark: ''
@@ -449,7 +449,7 @@ export default [
   ,
     realName: '金煜文'
     sex: ''
-    phoneNo: ''
+    phoneNo: ''  # 64
     IDCard: ''
     belongToCompany: ''
     remark: ''
@@ -485,7 +485,7 @@ export default [
     realName: '周旺'
     sex: ''
     phoneNo: ''
-    IDCard: ''
+    IDCard: ''  # 69
     belongToCompany: ''
     remark: ''
   ,
@@ -494,6 +494,6 @@ export default [
     phoneNo: ''
     IDCard: ''
     belongToCompany: ''
-    remark: ''
+    remark: ''  # 70
   
 ]

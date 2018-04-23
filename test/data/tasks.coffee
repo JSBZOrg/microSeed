@@ -184,11 +184,6 @@ target.out = =>
       delete jsonData.roomId
     return jsonData
 
-  # 延时函数
-  delay = (ms) =>
-    new Promise (resolve, ms) =>
-      setTimeout resolve, ms
-
   # 登录
   user = await services.Login.login {
     username: '何文涛'

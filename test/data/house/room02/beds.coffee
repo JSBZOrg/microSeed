@@ -1,3 +1,5 @@
+import tenants from '../../tenants'
+
 export default [
     # 安顺花园菊坊2号1单元404
     bedNo: '404-1-1'
@@ -5,102 +7,119 @@ export default [
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-1-2'
     bedName: ''
     rentMoney: 536
     detentionType: ''
-    remark: ''
+    remark: '朱桂云'
+    tenant: tenants[29]
   ,
     bedNo: '404-1-3'
     bedName: ''
     rentMoney: 510
     detentionType: ''
-    remark: ''
+    remark: '江娇'
+    tenant: tenants[30]    
   ,
     bedNo: '404-1-4'
     bedName: ''
     rentMoney: 536
     detentionType: ''
-    remark: ''
+    remark: '向思'
+    tenant: tenants[31]        
   ,
     bedNo: '404-2'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-3-1'
     bedName: ''
     rentMoney: null
     detentionType: ''
-    remark: '' # 30
+    remark: '' # 5
+    tenant: null
   ,
     bedNo: '404-3-2'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-3-3'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-3-4'
     bedName: ''
     rentMoney: 650
     detentionType: ''
-    remark: '' 
+    remark: '黄江沅' 
+    tenant: tenants[32]
   ,
     bedNo: '404-4-1'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''  # 10
+    tenant: null
   ,
     bedNo: '404-4-2'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: '' 
+    tenant: null
   ,
     bedNo: '404-4-3'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-4-4'
     bedName: ''
     rentMoney: 580
     detentionType: ''
-    remark: ''
+    remark: '朱玲'
+    tenant: tenants[33]
   ,
     bedNo: '404-4-5'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-4-6'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''  # 15
+    tenant: null
   ,
     bedNo: '404-5-1'
     bedName: ''
     rentMoney: null
     detentionType: '' 
     remark: ''
+    tenant: null
   ,
     bedNo: '404-5-2'
     bedName: ''
     rentMoney: 540
     detentionType: ''
-    remark: ''
+    remark: '姚艳红'
+    tenant: tenants[34]
   ,
     bedNo: '404-5-3'
     bedName: ''
@@ -113,40 +132,47 @@ export default [
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-6-1'
     bedName: ''
     rentMoney: null
     detentionType: ''  # 20
     remark: ''
+    tenant: null
   ,
     bedNo: '404-6-2'
     bedName: ''
     rentMoney: 580
     detentionType: '' 
-    remark: ''
+    remark: '刘青青'
+    tenant: tenants[35]
   ,
     bedNo: '404-6-3'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-6-4'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-6-5'
     bedName: ''
     rentMoney: null
     detentionType: ''
     remark: ''
+    tenant: null
   ,
     bedNo: '404-6-6'
     bedName: ''
     rentMoney: 600
     detentionType: ''
-    remark: '' # 25
+    remark: '曾黎' # 25
+    tenant: tenants[36]
 ]
