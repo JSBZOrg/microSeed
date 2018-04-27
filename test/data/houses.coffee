@@ -55,7 +55,7 @@ export default [
     rentEndTime: '2022-03-31'
     agent: ''
     agentPhoneNo: ''
-    agencyFees: null
+    agencyFees: 2500
     rentMoney: 5000
     earnestMoney: 5000
     landlord: landlord[7]      # 房东

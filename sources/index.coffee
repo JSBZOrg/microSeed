@@ -5,7 +5,7 @@ import { createLandlord, findLdwithIDCard, reloadLandlord, fetchLandlord } from 
 import { createHouse, findHouseWithLandlord } from './api/house'
 import { createRoom, reloadRoom, findRoomWithHouse } from './api/room'
 import { createBed, reloadBed, findBedWithRoom } from './api/bed'
-import { createTenant } from './api/tenant'
+import { createTenant, fetchTenant } from './api/tenant'
  
 export default router(
   # login
@@ -37,4 +37,5 @@ export default router(
   get '/bed/link/:roomId', findBedWithRoom
   # tenant
   post '/tenant', createTenant
+  get '/tenant/:objectId', fetchTenant
 )

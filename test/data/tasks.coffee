@@ -4,11 +4,13 @@ import fs from 'fs'
 import houses from './houses'
 import landlord from './landlord'
 import services from '../../sources/services/local'
-
 import { each } from 'awaity/esm'
 
 target.all = =>
   # dd 'hello, world'
+  await services.Login.login 
+    username: '何文涛'
+    password: '123456'
 
 target.landlord = =>
   dd landlord
@@ -17,12 +19,12 @@ target.landlord = =>
 target.houses = =>
 
   await services.Login.register {
-    username: '张三'
+    username: '何文涛'
     password: '123456'
   }
 
   user = await services.Login.login {
-    username: '张三'
+    username: '何文涛'
     password: '123456'
   }
 
@@ -192,126 +194,204 @@ target.houses = =>
 
 # 数据导出
 target.out = =>
-  # 封装delete方法
-  deleteFunc = (jsonData) =>
-    if jsonData?.landlordId?
-      delete jsonData.landlordId
-    if jsonData?.updatedAt?
-      delete jsonData.updatedAt
-    if jsonData?.objectId?
-      delete jsonData.objectId
-    if jsonData?.createdAt?
-      delete jsonData.createdAt
-    if jsonData?.personId?
-      delete jsonData.personId
-    if jsonData?.payeeId?
-      delete jsonData.payeeId
-    if jsonData?.authorizerId?
-      delete jsonData.authorizerId
-    if jsonData?.houseId?
-      delete jsonData.houseId
-    if jsonData?.roomId?
-      delete jsonData.roomId
-    return jsonData
 
-  # 登录
-  user = await services.Login.login {
+  deleteFunc = (jsonData) =>
+    {
+      others...
+      landlordId
+      updatedAt
+      objectId
+      createdAt
+      personId
+      payeeId
+      authorizerId
+      houseId
+      roomId
+      tenantId
+    } = jsonData
+    others
+
+  # 判断 data文件夹下面是否存在json文件如果没有则创建
+  await fs.exists "../data/json"
+  , (exists) =>
+    unless exists
+      await fs.mkdir "../data/json"
+      , 0o0777
+      , (err) =>
+        if err
+          dd err
+
+  try
+    # 登录
+    user = await services.Login.login 
+      username: '何文涛'
+      password: '123456'
+    
+    # 找到所有房东
+    landlordResults = await services.landlord.reload
+      token: user.token
+
+    allTemp = []
+
+    # 找到房东下的房源
+    await Promise.all landlordResults.results.map (iterm) =>
+
+      houseResults = await services.Special.findHouseWithLandlord
+        token: user.token
+        landlordId: iterm.objectId
+
+      # 要将房源相应的授权人、其他房东、结款人的信息关联查询出来
+      # otherLandlord  payeeId  authorizerId
+      await Promise.all houseResults.results.map (house) =>
+
+        house_temp = JSON.parse JSON.stringify house
+        
+        # 找到其他房东的关联信息
+        await Promise.all house.otherLandlord.map (otherLd) =>
+
+          otherLdResults = await services.landlord.fetch
+            token: user.token
+            objectId: otherLd
+
+          otherLd_temp = JSON.parse JSON.stringify otherLdResults
+          otherLd_temp = deleteFunc otherLd_temp
+          house_temp.otherLandlord = otherLd_temp
+          
+        # 找到授权人的关联信息
+        authorizerResults = await services.user.fetch
+          token: user.token
+          objectId: house.authorizerId
+
+        authorizer_temp = JSON.parse JSON.stringify authorizerResults
+        authorizer_temp = deleteFunc authorizer_temp
+        house_temp.authorizer = authorizer_temp     
+
+        # 找到结款人的关联信息
+        paeeResults = await services.user.fetch
+          token: user.token
+          objectId: house.payeeId
+
+        paee_temp = JSON.parse JSON.stringify paeeResults
+        paee_temp = deleteFunc paee_temp       
+        house_temp.payee = paee_temp
+        
+        # 找到房源下的房间
+        roomResults = await services.Special.findRoomWithHouse
+          token: user.token
+          houseId: house.objectId
+
+        room_temp = JSON.parse JSON.stringify roomResults.results
+        
+        await Promise.all room_temp.map (roomIterm) =>
+          roomIterm = deleteFunc roomIterm
+        # room_temp.forEach (roomIterm) =>
+        #   roomIterm = deleteFunc roomIterm
+        house_temp.room = room_temp
+
+        # 找到房间下的床位
+        await Promise.all roomResults.results.map (room) =>
+
+          bedResults = await services.Special.findBedWithRoom
+            token: user.token
+            roomId: room.objectId
+
+          bed_temp = JSON.parse JSON.stringify bedResults.results
+          
+          await Promise.all bed_temp.map (bedIterm) =>
+            # 找到床位关联的用户
+            tenantData = await services.tenant.fetch
+              token: user.token
+              objectId: bedIterm.tenantId
+
+            if tenantData? and tenantData is  ''
+              tenantData = {}
+            tenantData = deleteFunc tenantData
+            bedIterm = deleteFunc bedIterm            
+            bedIterm.tenant = tenantData
+            
+          await Promise.all house_temp.room.map (roomData) =>
+            roomData.beds = bed_temp
+            # house_temp = deleteFunc house_temp
+            iterm = deleteFunc iterm
+            house_temp.landlord = iterm
+            house_temp = deleteFunc house_temp
+
+          allTemp.push house_temp
+
+    dd allTemp
+    # allTemp.forEach (eachTemp, index) ->
+    #   fs.writeFile "json/house#{index+1}.json"
+    #   , 
+    #     JSON.stringify eachTemp, null, 2
+    #   , (err) =>
+    #     if err
+    #       dd err
+
+  catch error
+    if typeof error is 'function'
+      dd error()
+    else
+      dd error   
+
+
+
+target.put = =>
+  # 创建用户
+  # await services.Login.register
+  #   username: '何文涛'
+  #   password: '123456'
+  
+  # 用户登录
+  user = await services.Login.login
     username: '何文涛'
     password: '123456'
-  }
-  
-  # 找到所有房东
-  landlordResults = await services.landlord.reload {
-    token: user.token
-  }
-  
-  # 计算总共有多少房源
-  roomTotal = await services.room.reload {
-    token: user.token
-  }
 
-  allTemp = []
+  # 创建房东函数
+  createLandlord = (params) =>
+    if params? and Object.keys(params).length > 0
+      result = await services.landlord.create {
+        token: user.token
+        params...
+      }
+      objectId = result.objectId
+    else
+      objectId = ''
   
-  # 找到房东下的房源
-  landlordResults.results.forEach (iterm) =>
-    houseResults = await services.Special.findHouseWithLandlord {
+  # 创建房源函数
+  createHouse = (params) =>
+    await services.house.create {
       token: user.token
-      landlordId: iterm.objectId
+      params...
     }
-    # 要将房源相应的授权人、其他房东、结款人的信息关联查询出来
-    # otherLandlord  payeeId  authorizerId
-    houseResults.results.forEach (house) =>
-      house_temp = JSON.parse JSON.stringify house
-      
-      # 找到其他房东的关联信息
-      house.otherLandlord.forEach (otherLd) =>
-        otherLdResults = await services.landlord.fetch {
-          token: user.token
-          objectId: otherLd
-        } 
-        otherLd_temp = JSON.parse JSON.stringify otherLdResults
-        deleteFunc(otherLd_temp)
-        house_temp.otherLandlord = otherLd_temp
-        
-      # 找到授权人的关联信息
-      authorizerResults = await services.user.fetch {
-        token: user.token
-        objectId: house.authorizerId
+
+  # 读取文件函数
+  readfile = (startPath, callback) =>
+    allJsonData = []      
+    fs.readdir startPath
+    , (err, paths) =>
+      if err
+        dd err
+      else
+        paths.forEach (path) =>
+          fs.readFile "#{startPath}/#{path}"
+          , (err, data) =>
+            if err
+              dd err
+            else
+              jsonObj = JSON.parse data
+              allJsonData.push jsonObj
+              callback allJsonData
+
+  readfile './json', (files) =>
+    await Promise.all files.map (file) =>
+      # 新建房东
+      ldResult = await createLandlord file.landlord
+      # 新建其他房东
+      otherldResult = await createLandlord file.otherLandlord
+      # 新建房源
+      houseResult = await createHouse {
+        file...
+        landlordId: ldResult
+        otherLandlordId: otherldResult
       }
-      authorizer_temp = JSON.parse JSON.stringify authorizerResults
-      deleteFunc(authorizer_temp)
-      house_temp.authorizer = authorizer_temp      
 
-      # 找到结款人的关联信息
-      paeeResults = await services.user.fetch {
-        token: user.token
-        objectId: house.payeeId
-      }
-      paee_temp = JSON.parse JSON.stringify paeeResults
-      deleteFunc(paee_temp)      
-      house_temp.payee = paee_temp
-      
-      # 找到房源下的房间
-      roomResults = await services.Special.findRoomWithHouse {
-        token: user.token
-        houseId: house.objectId
-      }
-      room_temp = JSON.parse JSON.stringify roomResults.results
-      room_temp.forEach (roomIterm) =>
-        deleteFunc(roomIterm)      
-      house_temp.room = room_temp
-
-      # 找到房间下的床位
-      roomResults.results.forEach (room) =>
-        bedResults = await services.Special.findBedWithRoom {
-          token: user.token
-          roomId: room.objectId
-        }
-        bed_temp = JSON.parse JSON.stringify bedResults.results
-        bed_temp.forEach (bedIterm) =>
-          deleteFunc(bedIterm)
-
-        house_temp.room.forEach (roomData) =>
-          roomData.beds = bed_temp
-
-          deleteFunc(house_temp)
-          deleteFunc(iterm)        
-          house_temp.landlord = iterm
-
-        allTemp.push(house_temp)
-        
-        # 判断 data文件夹下面是否存在json文件如果没有则创建
-        fs.exists("../data/json", (exists) =>
-          if not exists
-            fs.mkdir("../data/json", 0o0777, (err) =>
-              if err
-                dd err
-            )
-          else
-            allTemp.forEach (eachTemp, index) =>
-              fs.writeFile("json/house#{index+1}.json", JSON.stringify(eachTemp, null, 4), (err) =>
-                if err
-                  dd err
-              )
-        )  
-         

@@ -20,6 +20,16 @@ createTenant = (req, res) =>
   catch error
     console.log error()
 
+fetchTenant = (req, res) =>
+  try
+    body = await json req
+    if body?.token? and judgeIsVerify(body.token) is true
+      delete body.token
+      await services.Tenants.fetch body
+  catch error
+    console.log error()
+
 export {
   createTenant
+  fetchTenant
 }
