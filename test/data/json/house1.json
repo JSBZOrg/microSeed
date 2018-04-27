@@ -1,0 +1,381 @@
+{
+  "building": "梅岭4栋",
+  "rentStartTime": "2016-11-01",
+  "community": "安顺家园",
+  "unit": "2单元",
+  "agencyFees": 1800,
+  "city": "武汉市",
+  "rentType": "分租",
+  "agent": "武汉聚联宝房地产代理有限公司",
+  "street": "",
+  "otherLandlord": {
+      "remark": "缺少性别电话号码和身份证号码",
+      "sex": "",
+      "phoneNo": "",
+      "IDCard": "4201061972012644200",
+      "realName": "任永开"
+  },
+  "acreage": 127.02,
+  "area": "武昌区",
+  "rentMoney": 3600,
+  "earnestMoney": 3600,
+  "agentPhoneNo": "",
+  "province": "湖北省",
+  "rentEndTime": "2021-10-31",
+  "floor": "1401",
+  "authorizer": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "18717176007",
+      "IDCard": "420106197201264429",
+      "realName": "乐群桥"
+  },
+  "payee": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "18717176007",
+      "IDCard": "420106197201264429",
+      "realName": "乐群桥"
+  },
+  "room": [
+      {
+          "remark": "安顺家园梅岭4栋2单元1401",
+          "roomName": "",
+          "roomNo": "1401",
+          "beds": [
+              {
+                  "remark": "",
+                  "bedNo": "1401-2-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1401-3-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1401-5-2",
+                  "bedName": "",
+                  "rentMoney": 600,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1401-3-2",
+                  "bedName": "",
+                  "rentMoney": 680,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1401-3-4",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "卢丹",
+                  "bedNo": "1401-5-1",
+                  "bedName": "",
+                  "rentMoney": 600,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "卢丹"
+                  }
+              },
+              {
+                  "remark": "金文玲",
+                  "bedNo": "1401-5-4",
+                  "bedName": "",
+                  "rentMoney": 600,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "金文玲"
+                  }
+              },
+              {
+                  "remark": "祁红琴",
+                  "bedNo": "1401-1-4",
+                  "bedName": "",
+                  "rentMoney": 680,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "祁红琴"
+                  }
+              },
+              {
+                  "remark": "李琦",
+                  "bedNo": "1401-1-2",
+                  "bedName": "",
+                  "rentMoney": 680,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "李琦"
+                  }
+              },
+              {
+                  "remark": "徐明悦",
+                  "bedNo": "1401-4-5",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "棠越餐饮",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "徐明悦"
+                  }
+              },
+              {
+                  "remark": "李玉凤",
+                  "bedNo": "1401-4-4",
+                  "bedName": "",
+                  "rentMoney": 630,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "李玉凤"
+                  }
+              },
+              {
+                  "remark": "吴蔚",
+                  "bedNo": "1401-5-5",
+                  "bedName": "",
+                  "rentMoney": 600,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "吴蔚"
+                  }
+              },
+              {
+                  "remark": "向玉琳",
+                  "bedNo": "1401-4-6",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "棠越餐饮",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "向玉琳"
+                  }
+              },
+              {
+                  "remark": "吴来勤",
+                  "bedNo": "1401-2-2",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "棠越餐饮",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "吴来勤"
+                  }
+              },
+              {
+                  "remark": "王艳",
+                  "bedNo": "1401-4-2",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "棠越餐饮",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "王艳"
+                  }
+              },
+              {
+                  "remark": "游章玲",
+                  "bedNo": "1401-1-1",
+                  "bedName": "",
+                  "rentMoney": 650,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "游章玲"
+                  }
+              },
+              {
+                  "remark": "王梅",
+                  "bedNo": "1401-2-1",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "棠越餐饮",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "王梅"
+                  }
+              },
+              {
+                  "remark": "谌爱玲",
+                  "bedNo": "1401-3-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "谌爱玲"
+                  }
+              },
+              {
+                  "remark": "徐玉",
+                  "bedNo": "1401-5-6",
+                  "bedName": "",
+                  "rentMoney": 630,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "徐玉"
+                  }
+              },
+              {
+                  "remark": "李露珠",
+                  "bedNo": "1401-5-3",
+                  "bedName": "",
+                  "rentMoney": 600,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "李露珠"
+                  }
+              },
+              {
+                  "remark": "官梦恩",
+                  "bedNo": "1401-4-1",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "棠越餐饮",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "官梦恩"
+                  }
+              },
+              {
+                  "remark": "张燕妮",
+                  "bedNo": "1401-4-3",
+                  "bedName": "",
+                  "rentMoney": 600,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "张燕妮"
+                  }
+              },
+              {
+                  "remark": "曾帧",
+                  "bedNo": "1401-1-3",
+                  "bedName": "",
+                  "rentMoney": 552.5,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "曾帧"
+                  }
+              },
+              {
+                  "remark": "姜玮",
+                  "bedNo": "1401-2-4",
+                  "bedName": "",
+                  "rentMoney": 580,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "姜玮"
+                  }
+              }
+          ]
+      }
+  ],
+  "landlord": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "18717176007",
+      "IDCard": "420106197201264429",
+      "realName": "乐群桥"
+  }
+}

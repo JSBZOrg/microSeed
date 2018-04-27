@@ -1,0 +1,306 @@
+{
+  "building": "菊坊2号",
+  "rentStartTime": "2017-04-01",
+  "community": "安顺家园",
+  "unit": "1单元",
+  "agencyFees": null,
+  "city": "武汉市",
+  "rentType": "分租",
+  "agent": "",
+  "street": "",
+  "otherLandlord": [],
+  "acreage": 140.2,
+  "area": "武昌区",
+  "rentMoney": 5000,
+  "earnestMoney": 5000,
+  "agentPhoneNo": "",
+  "province": "湖北省",
+  "rentEndTime": "2022-03-31",
+  "floor": "404",
+  "authorizer": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "13971606788",
+      "IDCard": "420103197506170416",
+      "realName": "王昉"
+  },
+  "payee": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "13971606788",
+      "IDCard": "420103197506170416",
+      "realName": "王昉"
+  },
+  "room": [
+      {
+          "remark": "安顺花园菊坊2号1单元404",
+          "roomName": "",
+          "roomNo": "404",
+          "beds": [
+              {
+                  "remark": "",
+                  "bedNo": "404-1-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-3-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-3-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-3-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-4-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-4-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-4-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-4-5",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-4-6",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-5-4",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-5-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-6-5",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-6-4",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-6-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-6-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "404-5-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "向思",
+                  "bedNo": "404-1-4",
+                  "bedName": "",
+                  "rentMoney": 536,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "向思"
+                  }
+              },
+              {
+                  "remark": "朱玲",
+                  "bedNo": "404-4-4",
+                  "bedName": "",
+                  "rentMoney": 580,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "朱玲"
+                  }
+              },
+              {
+                  "remark": "黄江沅",
+                  "bedNo": "404-3-4",
+                  "bedName": "",
+                  "rentMoney": 650,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "黄江沅"
+                  }
+              },
+              {
+                  "remark": "朱桂云",
+                  "bedNo": "404-1-2",
+                  "bedName": "",
+                  "rentMoney": 536,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "朱桂云"
+                  }
+              },
+              {
+                  "remark": "江娇",
+                  "bedNo": "404-1-3",
+                  "bedName": "",
+                  "rentMoney": 510,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "江娇"
+                  }
+              },
+              {
+                  "remark": "姚艳红",
+                  "bedNo": "404-5-2",
+                  "bedName": "",
+                  "rentMoney": 540,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "姚艳红"
+                  }
+              },
+              {
+                  "remark": "曾黎",
+                  "bedNo": "404-6-6",
+                  "bedName": "",
+                  "rentMoney": 600,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "曾黎"
+                  }
+              },
+              {
+                  "remark": "刘青青",
+                  "bedNo": "404-6-2",
+                  "bedName": "",
+                  "rentMoney": 580,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "刘青青"
+                  }
+              }
+          ]
+      }
+  ],
+  "landlord": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "13971606788",
+      "IDCard": "420103197506170416",
+      "realName": "王昉"
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "building": "D栋",
+  "rentStartTime": "2017-03-15",
+  "community": "安顺花园",
+  "unit": "1单元",
+  "agencyFees": 2400,
+  "city": "武汉市",
+  "rentType": "分租",
+  "agent": "武汉丰联地产经纪有限公司",
+  "street": "",
+  "otherLandlord": [],
+  "acreage": 148.53,
+  "area": "武昌区",
+  "rentMoney": 6000,
+  "earnestMoney": 6000,
+  "agentPhoneNo": "027-87881169",
+  "province": "湖北省",
+  "rentEndTime": "2022-03-15",
+  "floor": "103",
+  "authorizer": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "13871481852",
+      "IDCard": "420106195210253255",
+      "realName": "张肖卫"
+  },
+  "payee": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "13871481852",
+      "IDCard": "420106195210253255",
+      "realName": "张肖卫"
+  },
+  "room": [
+      {
+          "remark": "安顺花园D栋1单元103",
+          "roomName": "",
+          "roomNo": "103",
+          "beds": [
+              {
+                  "remark": "",
+                  "bedNo": "103-1-1",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-4-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-3-5",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-4-5",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-2-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-1-2",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-4-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-2-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-4-6",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-4-4",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-6-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-4-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-3-6",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "103-5-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "金煜文",
+                  "bedNo": "103-3-1",
+                  "bedName": "",
+                  "rentMoney": 550,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "金煜文"
+                  }
+              },
+              {
+                  "remark": "张陈昱昊",
+                  "bedNo": "103-5-1",
+                  "bedName": "",
+                  "rentMoney": 580,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "张陈昱昊"
+                  }
+              },
+              {
+                  "remark": "颜炎",
+                  "bedNo": "103-1-4",
+                  "bedName": "",
+                  "rentMoney": 510,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "颜炎"
+                  }
+              },
+              {
+                  "remark": "喻鹏飞",
+                  "bedNo": "103-3-4",
+                  "bedName": "",
+                  "rentMoney": 580,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "喻鹏飞"
+                  }
+              },
+              {
+                  "remark": "黄露",
+                  "bedNo": "103-2-2",
+                  "bedName": "",
+                  "rentMoney": 630,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "黄露"
+                  }
+              },
+              {
+                  "remark": "李桃花",
+                  "bedNo": "103-3-3",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "李桃花"
+                  }
+              },
+              {
+                  "remark": "宋康",
+                  "bedNo": "103-3-2",
+                  "bedName": "",
+                  "rentMoney": 580,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "宋康"
+                  }
+              },
+              {
+                  "remark": "胡毅",
+                  "bedNo": "103-6-2",
+                  "bedName": "",
+                  "rentMoney": 680,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "胡毅"
+                  }
+              },
+              {
+                  "remark": "肖凡",
+                  "bedNo": "103-5-2",
+                  "bedName": "",
+                  "rentMoney": 630,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "肖凡"
+                  }
+              },
+              {
+                  "remark": "周旺",
+                  "bedNo": "103-5-4",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "周旺"
+                  }
+              },
+              {
+                  "remark": "黄浩",
+                  "bedNo": "103-1-3",
+                  "bedName": "",
+                  "rentMoney": 493,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "黄浩"
+                  }
+              }
+          ]
+      }
+  ],
+  "landlord": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "13871481852",
+      "IDCard": "420106195210253255",
+      "realName": "张肖卫"
+  }
+}

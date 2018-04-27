@@ -1,0 +1,307 @@
+{
+  "building": "10栋",
+  "rentStartTime": "2017-01-15",
+  "community": "安顺星苑",
+  "unit": "1单元",
+  "agencyFees": 2500,
+  "city": "武汉市",
+  "rentType": "分租",
+  "agent": "武汉丰联地产经纪有限公司",
+  "street": "",
+  "otherLandlord": [],
+  "acreage": 138.28,
+  "area": "武昌区",
+  "rentMoney": 5000,
+  "earnestMoney": 5000,
+  "agentPhoneNo": "027-87881169",
+  "province": "湖北省",
+  "rentEndTime": "2022-01-14",
+  "floor": "1202",
+  "authorizer": {
+      "remark": "缺少性别电话号码",
+      "sex": "",
+      "phoneNo": "",
+      "IDCard": "420106197009044063",
+      "realName": "程远"
+  },
+  "payee": {
+      "remark": "缺少性别电话号码",
+      "sex": "",
+      "phoneNo": "",
+      "IDCard": "420106197009044063",
+      "realName": "程远"
+  },
+  "room": [
+      {
+          "remark": "安顺星苑10栋1单元1202",
+          "roomName": "",
+          "roomNo": "1202",
+          "beds": [
+              {
+                  "remark": "",
+                  "bedNo": "1202-2-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-1-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-2-5",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-1-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-2-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-3-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-1-4",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-2-7",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-2-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-大厅-7",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-3-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-大厅-4",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-3-5",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-大厅-5",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-3-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-3-6",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-大厅-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-3-4",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "1202-大厅-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "陈洋",
+                  "bedNo": "1202-2-6",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "中移动",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "陈洋"
+                  }
+              },
+              {
+                  "remark": "张晓雨",
+                  "bedNo": "1202-1-2",
+                  "bedName": "",
+                  "rentMoney": 650,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "张晓雨"
+                  }
+              },
+              {
+                  "remark": "谢涛",
+                  "bedNo": "1202-2-8",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "中移动",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "谢涛"
+                  }
+              },
+              {
+                  "remark": "陈全",
+                  "bedNo": "1202-2-4",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "棠越餐饮",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "向玉琳"
+                  }
+              },
+              {
+                  "remark": "王建",
+                  "bedNo": "1202-大厅-6",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "王建"
+                  }
+              },
+              {
+                  "remark": "祁小庆",
+                  "bedNo": "1202-大厅-8",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "祁小庆"
+                  }
+              },
+              {
+                  "remark": "皮俊祥",
+                  "bedNo": "1202-大厅-3",
+                  "bedName": "",
+                  "rentMoney": 432,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "皮俊祥"
+                  }
+              }
+          ]
+      }
+  ],
+  "landlord": {
+      "remark": "缺少性别电话号码",
+      "sex": "",
+      "phoneNo": "",
+      "IDCard": "420106197009044063",
+      "realName": "程远"
+  }
+}

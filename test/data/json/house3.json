@@ -1,0 +1,333 @@
+{
+  "building": "9栋",
+  "rentStartTime": "2016-11-10",
+  "community": "安顺星苑",
+  "unit": "1单元",
+  "agencyFees": 2500,
+  "city": "武汉市",
+  "rentType": "分租",
+  "agent": "武汉吉家房地产经纪服务有限公司",
+  "street": "",
+  "otherLandlord": [],
+  "acreage": 138.71,
+  "area": "武昌区",
+  "rentMoney": 5000,
+  "earnestMoney": 10000,
+  "agentPhoneNo": "027-87121288",
+  "province": "湖北省",
+  "rentEndTime": "2021-11-09",
+  "floor": "702",
+  "authorizer": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "13907103296",
+      "IDCard": "420623196402220069",
+      "realName": "张肖燕"
+  },
+  "payee": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "13907103296",
+      "IDCard": "420623196402220069",
+      "realName": "张肖燕"
+  },
+  "room": [
+      {
+          "remark": "安顺星苑9栋1单元702",
+          "roomName": "",
+          "roomNo": "702",
+          "beds": [
+              {
+                  "remark": "",
+                  "bedNo": "702-2-5",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-1-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-2-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-1-1",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-1-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-2-7",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-2-3",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-3-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-2-8",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-3-4",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "",
+                  "bedNo": "702-大厅-2",
+                  "bedName": "",
+                  "rentMoney": 0,
+                  "detentionType": "",
+                  "tenant": {}
+              },
+              {
+                  "remark": "张康祥",
+                  "bedNo": "702-2-4",
+                  "bedName": "",
+                  "rentMoney": 468,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "张康祥"
+                  }
+              },
+              {
+                  "remark": "余志辉",
+                  "bedNo": "702-1-4",
+                  "bedName": "",
+                  "rentMoney": 650,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "余志辉"
+                  }
+              },
+              {
+                  "remark": "贾哲宇",
+                  "bedNo": "702-2-2",
+                  "bedName": "",
+                  "rentMoney": 451,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "贾哲宇"
+                  }
+              },
+              {
+                  "remark": "高惊雷",
+                  "bedNo": "702-大厅-6",
+                  "bedName": "",
+                  "rentMoney": 480,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "高惊雷"
+                  }
+              },
+              {
+                  "remark": "肖扬",
+                  "bedNo": "702-3-1",
+                  "bedName": "",
+                  "rentMoney": 630,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "肖扬"
+                  }
+              },
+              {
+                  "remark": "聂凯",
+                  "bedNo": "702-2-6",
+                  "bedName": "",
+                  "rentMoney": 550,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "聂凯"
+                  }
+              },
+              {
+                  "remark": "康小雄",
+                  "bedNo": "702-大厅-3",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "康小雄"
+                  }
+              },
+              {
+                  "remark": "鲁玉杰",
+                  "bedNo": "702-大厅-1",
+                  "bedName": "",
+                  "rentMoney": 450,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "鲁玉杰"
+                  }
+              },
+              {
+                  "remark": "华文",
+                  "bedNo": "702-大厅-4",
+                  "bedName": "",
+                  "rentMoney": 480,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "华文"
+                  }
+              },
+              {
+                  "remark": "吕高凡",
+                  "bedNo": "702-大厅-7",
+                  "bedName": "",
+                  "rentMoney": 530,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "吕高凡"
+                  }
+              },
+              {
+                  "remark": "张阳",
+                  "bedNo": "702-3-3",
+                  "bedName": "",
+                  "rentMoney": 567,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "张阳"
+                  }
+              },
+              {
+                  "remark": "郑名胜",
+                  "bedNo": "702-大厅-5",
+                  "bedName": "",
+                  "rentMoney": 480,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "郑名胜"
+                  }
+              },
+              {
+                  "remark": "郑东",
+                  "bedNo": "702-大厅-8",
+                  "bedName": "",
+                  "rentMoney": 500,
+                  "detentionType": "",
+                  "tenant": {
+                      "belongToCompany": "",
+                      "remark": "",
+                      "sex": "",
+                      "phoneNo": "",
+                      "IDCard": "",
+                      "realName": "郑东"
+                  }
+              }
+          ]
+      }
+  ],
+  "landlord": {
+      "remark": "缺少性别",
+      "sex": "",
+      "phoneNo": "13907103296",
+      "IDCard": "420623196402220069",
+      "realName": "张肖燕"
+  }
+}
